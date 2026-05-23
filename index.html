@@ -1,1597 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Krrish Kumar Singh | Mainframe Stage</title>
-  
-  <!-- GOOGLE SEARCH ENGINE OPTIMIZATION (SEO) NODES -->
-  <meta name="description" content="Official portfolio mainframe of Krrish Kumar Singh - Front-End Developer, Digital Creator, and founder of Cyber Core Arts. Based in Madhupur, Deoghar, Jharkhand.">
-  <meta name="keywords" content="Krrish Kumar Singh, Krrish Kumar Singh Madhupur, Cyber Core Arts, Front-End Developer Jharkhand, Web Design Student, Krrish Developer Stage, Krrish Kumar Singh Deoghar">
-  <meta name="author" content="Krrish Kumar Singh">
-  
-  <!-- LOCKING THE PORTFOLIO FONTS VIA GOOGLE FONTS NETWORK EMULSION -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin crossOrigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* Premium Executive Dark Aesthetic Framework */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Rajdhani', -apple-system, sans-serif;
-    }
-
-    /* Premium Custom Scrollbar Styling */
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #030306;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #00f0ff;
-      border-radius: 3px;
-      box-shadow: 0 0 10px #00f0ff;
-    }
-
-    body {
-      background-color: #030306;
-      color: #ffffff;
-      overflow-x: hidden;
-      min-height: 100vh;
-      scroll-behavior: smooth;
-    }
-
-    .hidden { display: none !important; }
-
-    /* SYSTEM ENTRANCE WELCOME INTRO GATEWAY OVERLAY */
-    #entranceBootOverlay {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: #020307;
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 20px;
-      transition: opacity 0.5s ease-out, visibility 0.5s;
-    }
-
-    .boot-matrix-text {
-      font-family: 'Courier New', Courier, monospace;
-      color: rgba(0, 240, 255, 0.6);
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      margin-bottom: -5px;
-    }
-
-    .welcome-main-banner {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: #ffffff;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-align: center;
-      max-width: 90%;
-      line-height: 1.4;
-    }
-
-    .access-granted-badge {
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid #10b981;
-      color: #10b981;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 700;
-      padding: 10px 24px;
-      border-radius: 4px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      box-shadow: 0 0 20px rgba(16, 185, 129, 0.3), inset 0 0 10px rgba(16, 185, 129, 0.1);
-      animation: pulseGreen 1.5s infinite;
-    }
-
-    @keyframes pulseGreen {
-      0% { box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
-      50% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.5); }
-      100% { box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
-    }
-
-    /* FIXED STATUS BAR INTERFACE LOCKED INTERNALLY IN HERO SECTION */
-    .shrunk-center-status {
-      position: absolute;
-      top: 25px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 700;
-      color: #00f0ff;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      background: rgba(3, 3, 6, 0.7);
-      border: 1px solid rgba(0, 240, 255, 0.25);
-      padding: 6px 16px;
-      border-radius: 3px;
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.05);
-      white-space: nowrap;
-      pointer-events: none;
-    }
-
-    /* SYSTEM ACCESS BADGE: BOUNCES UP -> DELAYS -> SLIDES DOWN BELOW VIEWPORT */
-    .dynamic-access-granted-box {
-      position: fixed;
-      bottom: -100px; 
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid #10b981;
-      color: #10b981;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 700;
-      padding: 12px 26px;
-      border-radius: 4px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      box-shadow: 0 0 25px rgba(16, 185, 129, 0.4), inset 0 0 10px rgba(16, 185, 129, 0.1);
-      z-index: 9999;
-      animation: entranceGreenSequence 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    }
-
-    @keyframes entranceGreenSequence {
-      0% { bottom: -100px; }
-      12% { bottom: 40px; }       
-      50% { bottom: 40px; }       
-      62% { bottom: 40px; opacity: 1; }
-      75% { bottom: -100px; opacity: 0; } 
-      100% { bottom: -100px; opacity: 0; display: none; }
-    }
-
-    /* THEME MATCHED WELCOME TOAST PANEL: JUMPS UP AFTER 1.5S -> FADES OUT SLOW MOTION IN PLACE */
-    .theme-matched-welcome-toast {
-      position: fixed;
-      bottom: -100px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(6, 15, 38, 0.9);
-      border: 1px solid #00f0ff;
-      color: #ffffff;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
-      padding: 14px 28px;
-      border-radius: 4px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      box-shadow: 0 0 30px rgba(0, 240, 255, 0.25);
-      z-index: 9998;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      opacity: 0;
-      animation: entranceWelcomeSequence 3.5s cubic-bezier(0.175, 0.885, 0.32, 1.15) 2.1s forwards;
-    }
-
-    @keyframes entranceWelcomeSequence {
-      0% { bottom: -100px; opacity: 0; }
-      12% { bottom: 40px; opacity: 1; }      
-      55% { bottom: 40px; opacity: 1; }      
-      100% { bottom: 40px; opacity: 0; }     
-    }
-
-    /* Technical Architectural Grid Overlay Global */
-    .system-grid {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background-image: linear-gradient(rgba(0, 162, 255, 0.01) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(0, 162, 255, 0.01) 1px, transparent 1px);
-      background-size: 60px 60px;
-      z-index: -2;
-      pointer-events: none;
-    }
-
-    .ambient-blue-glow {
-      position: fixed;
-      top: -10%; left: -10%;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(0, 162, 255, 0.03) 0%, transparent 75%);
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    /* Fixed Clean Header Navigation */
-    .top-navbar {
-      position: fixed;
-      top: 30px;
-      right: 30px;
-      display: flex;
-      gap: 15px;
-      z-index: 100;
-    }
-
-    .nav-btn {
-      background: rgba(5, 10, 25, 0.8);
-      color: #00f0ff;
-      border: 1px solid rgba(0, 240, 255, 0.2);
-      padding: 10px 24px;
-      border-radius: 4px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      cursor: pointer;
-      backdrop-filter: blur(8px);
-      transition: all 0.3s ease;
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    .nav-btn:hover {
-      background: #00f0ff;
-      color: #030306;
-      box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
-      transform: translateY(-2px);
-    }
-
-    /* Main Viewport Container */
-    .viewport-wrapper {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 25px;
-      position: relative;
-    }
-
-    /* SECTION 1: HOMEPAGE WITH FIXED BACKGROUND CANVAS CONTAINMENT */
-    .hero-interface {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 80px 0;
-      position: relative;
-    }
-
-    /* LOCKING THE MESH NET ONLY ON FIRST PAGE VISUAL FIELD */
-    #cyberMeshCanvas {
-      position: absolute;
-      top: 0; left: calc(-50vw + 50%); 
-      width: 100vw; height: 100%;
-      z-index: -3;
-      pointer-events: all;
-    }
-
-    .hero-left-column {
-      width: 55%;
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-left-column h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 4.8rem;
-      font-weight: 900;
-      letter-spacing: -1px;
-      line-height: 0.95;
-      background: linear-gradient(180deg, #ffffff 50%, #64748b 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 20px;
-    }
-
-    .hero-structural-spacer {
-      height: 15px;
-      margin-bottom: 15px;
-    }
-
-    .professional-manifesto {
-      font-size: 1.3rem;
-      color: #94a3b8;
-      line-height: 1.7;
-      margin-bottom: 45px;
-      max-width: 550px;
-      min-height: 40px;
-      letter-spacing: 1px;
-    }
-
-    .typed-text {
-      color: #00f0ff;
-      font-weight: 700;
-      border-right: 2px solid #00f0ff;
-      padding-right: 5px;
-      animation: blink 0.75s step-end infinite;
-    }
-
-    @keyframes blink {
-      from, to { border-color: transparent }
-      50% { border-color: #00f0ff; }
-    }
-
-    .primary-trigger-btn {
-      background: linear-gradient(90deg, rgba(0, 162, 255, 0.05), rgba(0, 240, 255, 0.2));
-      color: #ffffff;
-      border: 1px solid #00f0ff;
-      padding: 16px 36px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      border-radius: 4px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      cursor: pointer;
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
-      transition: all 0.3s ease;
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    .primary-trigger-btn:hover {
-      background: #00f0ff;
-      color: #030306;
-      box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
-    }
-
-    .hero-right-column {
-      width: 38%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .frame-header-name {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 900;
-      letter-spacing: 8px;
-      color: #ffffff;
-      margin-bottom: 15px;
-      text-align: center;
-      border-bottom: 2px solid rgba(0, 240, 255, 0.3);
-      padding-bottom: 5px;
-      width: 100%;
-      max-width: 320px;
-    }
-
-    .hud-brackets-decor::before, .hud-brackets-decor::after {
-      content: '+';
-      position: absolute;
-      font-family: monospace;
-      color: #00f0ff;
-      font-size: 1.2rem;
-      font-weight: bold;
-      z-index: 5;
-    }
-    .hud-brackets-decor::before { top: 45px; left: calc(50% - 165px); }
-    .hud-brackets-decor::after { bottom: -5px; right: calc(50% - 165px); }
-
-    .premium-border-frame {
-      width: 320px;
-      height: 410px;
-      background: #060a14;
-      border: 1px solid #00f0ff;
-      border-radius: 2px;
-      padding: 6px;
-      box-shadow: 0 0 25px rgba(0, 240, 255, 0.15);
-      position: relative;
-    }
-
-    .image-viewport {
-      width: 100%; height: 100%;
-      background: #010103;
-      overflow: hidden;
-      position: relative;
-    }
-
-    #matrixPortraitCanvas {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      z-index: 1;
-      opacity: 0.35;
-      pointer-events: none;
-    }
-
-    .image-viewport img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      z-index: 2;
-      position: relative;
-    }
-
-    /* SECTION 2: DEEP PROFILE PANEL SHEET WITH GLASSMORPHISM OVERLAY */
-    .profile-dashboard-panel {
-      background: rgba(8, 14, 32, 0.45) !important; 
-      border: 1px solid rgba(0, 240, 255, 0.25);
-      border-radius: 6px;
-      padding: 45px;
-      margin-top: 20px;
-      margin-bottom: 60px;
-      box-shadow: 0 0 30px rgba(0, 240, 255, 0.05);
-      backdrop-filter: blur(20px) !important;
-      -webkit-backdrop-filter: blur(20px) !important;
-      animation: panelReveal 0.4s ease-out;
-      position: relative;
-      z-index: 5;
-    }
-
-    .panel-main-header {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #00f0ff;
-      letter-spacing: 3px;
-      border-bottom: 1px solid rgba(0, 240, 255, 0.2);
-      padding-bottom: 18px;
-      margin-bottom: 35px;
-    }
-
-    .dashboard-split-layout {
-      display: flex;
-      justify-content: space-between;
-      gap: 40px;
-      margin-bottom: 30px;
-    }
-
-    .details-left-segment {
-      width: 58%;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .info-data-card {
-      background: rgba(1, 10, 26, 0.4) !important;
-      border: 1px solid rgba(0, 240, 255, 0.15) !important;
-      padding: 20px;
-      border-radius: 4px;
-      backdrop-filter: blur(8px) !important;
-      -webkit-backdrop-filter: blur(8px) !important;
-    }
-
-    .info-data-card label {
-      display: block;
-      font-size: 0.8rem;
-      color: #38bdf8;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-      font-weight: 700;
-    }
-
-    .info-data-card p {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: #ffffff;
-      line-height: 1.5;
-    }
-
-    .services-right-segment {
-      width: 38%;
-      background: rgba(1, 10, 26, 0.4) !important;
-      border: 1px solid rgba(0, 240, 255, 0.15) !important;
-      padding: 25px;
-      border-radius: 4px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 25px;
-      backdrop-filter: blur(8px) !important;
-      -webkit-backdrop-filter: blur(8px) !important;
-    }
-
-    .commercial-box-wrapper {
-      text-align: center;
-      width: 100%;
-    }
-
-    .service-prompt-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 12px;
-      letter-spacing: 1px;
-    }
-
-    .service-prompt-desc {
-      font-size: 0.95rem;
-      color: #94a3b8;
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
-
-    .open-slide-panel-btn {
-      background: #00f0ff;
-      color: #030306;
-      border: none;
-      padding: 12px 25px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      border-radius: 4px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      cursor: pointer;
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
-      transition: all 0.3s ease;
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    .open-slide-panel-btn:hover {
-      box-shadow: 0 0 25px #00f0ff;
-      transform: translateY(-2px);
-    }
-
-    .skills-architecture-container {
-      width: 100%;
-      text-align: left;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      padding-top: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .skills-section-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #00f0ff;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .skills-grid-layout {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .skill-node-tag {
-      background: rgba(0, 240, 255, 0.05);
-      border: 1px solid rgba(0, 240, 255, 0.2);
-      padding: 6px 14px;
-      border-radius: 3px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #cbd5e1;
-      letter-spacing: 0.5px;
-    }
-
-    .skill-future-tag {
-      background: rgba(148, 163, 184, 0.02);
-      border: 1px dashed rgba(148, 163, 184, 0.25);
-      color: #94a3b8;
-    }
-
-    .projects-workspace-section {
-      width: 100%;
-      margin-top: 35px;
-      padding-top: 30px;
-      border-top: 1px solid rgba(0, 240, 255, 0.1);
-    }
-
-    .workspace-subheading {
-      font-size: 0.9rem;
-      color: #38bdf8;
-      font-weight: 700;
-      letter-spacing: 3px;
-      margin-bottom: 15px;
-    }
-
-    .projects-matrix-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-      margin-bottom: 35px;
-    }
-
-    /* ADVANCED ASYMMETRICAL CUT-EDGE GLASSLOOK CARDS */
-    .project-terminal-card {
-      background: rgba(1, 10, 26, 0.4) !important;
-      border: 1px solid rgba(0, 240, 255, 0.2) !important;
-      padding: 24px;
-      backdrop-filter: blur(8px) !important;
-      -webkit-backdrop-filter: blur(8px) !important;
-      position: relative;
-      clip-path: polygon(15px 0%, 100% 0%, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0% 100%, 0% 15px);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .project-terminal-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 2px;
-      background: linear-gradient(90deg, #00f0ff, transparent);
-      opacity: 0.4;
-    }
-
-    .project-terminal-card:hover {
-      border-color: #00f0ff !important;
-      background: rgba(0, 240, 255, 0.05) !important;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 20px rgba(0, 240, 255, 0.1);
-    }
-
-    .project-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-
-    .project-card-title {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #ffffff;
-      letter-spacing: 0.5px;
-    }
-
-    .project-status-badge {
-      font-size: 0.65rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      padding: 3px 8px;
-      border-radius: 2px;
-      text-transform: uppercase;
-    }
-
-    .badge-live {
-      background: rgba(255, 62, 62, 0.1);
-      color: #ff5555;
-      border: 1px solid rgba(255, 62, 62, 0.15);
-    }
-
-    .badge-build {
-      background: rgba(0, 240, 255, 0.04);
-      color: #38bdf8;
-      border: 1px solid rgba(0, 240, 255, 0.15);
-    }
-
-    .project-card-desc {
-      font-size: 0.92rem;
-      color: #94a3b8;
-      line-height: 1.5;
-      margin-bottom: 18px;
-    }
-
-    .youtube-trigger-btn, .inspect-trigger-btn {
-      padding: 10px 16px;
-      border-radius: 4px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      width: fit-content;
-      text-transform: uppercase;
-      transition: all 0.3s;
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    .youtube-trigger-btn {
-      background: rgba(255, 62, 62, 0.04);
-      border: 1px solid rgba(255, 62, 62, 0.3);
-      color: #ff5555;
-    }
-
-    .youtube-trigger-btn:hover {
-      background: #ff3e3e;
-      color: #030306;
-      box-shadow: 0 0 15px rgba(255, 62, 62, 0.4);
-      border-color: #ff3e3e;
-    }
-
-    .inspect-trigger-btn {
-      background: rgba(0, 240, 255, 0.04);
-      border: 1px solid rgba(0, 240, 255, 0.3);
-      color: #00f0ff;
-    }
-
-    .inspect-trigger-btn:hover {
-      background: #00f0ff;
-      color: #030306;
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
-      border-color: #00f0ff;
-    }
-
-    .youtube-trigger-btn svg, .inspect-trigger-btn svg {
-      fill: currentColor;
-      width: 14px;
-      height: 14px;
-    }
-
-    /* SYSTEM OVERLAY MODALS */
-    .modal-overlay-screen {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(2, 3, 7, 0.96);
-      z-index: 500;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal-dialogue-box {
-      background: rgba(4, 8, 22, 0.98);
-      border: 2px solid #00f0ff;
-      padding: 40px;
-      border-radius: 4px;
-      text-align: center;
-      max-width: 520px;
-      width: 90%;
-      box-shadow: 0 0 40px rgba(0, 240, 255, 0.25);
-      animation: modalScaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .youtube-alert-border {
-      border-color: #ff3e3e !important;
-      box-shadow: 0 0 40px rgba(255, 62, 62, 0.2) !important;
-    }
-
-    .modal-title-text {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      color: #00f0ff;
-      margin-bottom: 15px;
-    }
-
-    .modal-desc-text {
-      font-size: 1rem;
-      color: #cbd5e1;
-      line-height: 1.6;
-      margin-bottom: 25px;
-      text-align: left;
-    }
-
-    .advanced-contact-matrix {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 25px;
-      text-align: left;
-    }
-
-    .contact-matrix-row {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 12px 16px;
-      border-radius: 4px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .contact-matrix-row:hover {
-      background: rgba(0, 240, 255, 0.04);
-    }
-
-    .contact-matrix-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: #38bdf8;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .contact-matrix-value {
-      font-size: 0.92rem;
-      font-weight: 600;
-    }
-
-    .value-active {
-      font-family: 'Courier New', Courier, monospace;
-      color: #00f0ff;
-      font-weight: 700;
-    }
-
-    .value-offline {
-      color: #64748b;
-      font-size: 0.75rem;
-      letter-spacing: 0.5px;
-    }
-
-    .more-details-flag {
-      font-size: 0.8rem;
-      color: #94a3b8;
-      font-style: italic;
-      text-align: center;
-      margin-top: 5px;
-    }
-
-    /* MINI SCREEN POPUP FOR EMAIL COPY ROUTINE */
-    .mini-screen-overlay {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(2, 3, 7, 0.85);
-      z-index: 600;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .mini-dialogue-box {
-      background: #060e22;
-      border: 1px solid #00f0ff;
-      padding: 25px;
-      border-radius: 4px;
-      width: 90%;
-      max-width: 400px;
-      text-align: center;
-      box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
-      animation: modalScaleUp 0.2s ease-out;
-    }
-
-    .mini-email-display {
-      background: #01040a;
-      border: 1px solid rgba(0, 240, 255, 0.2);
-      padding: 10px;
-      font-family: monospace;
-      color: #00f0ff;
-      font-size: 0.95rem;
-      margin: 15px 0;
-      word-break: break-all;
-      border-radius: 3px;
-    }
-
-    .copy-action-btn {
-      background: #00f0ff;
-      color: #030306;
-      border: none;
-      padding: 10px 20px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      border-radius: 4px;
-      cursor: pointer;
-      text-transform: uppercase;
-      font-family: 'Orbitron', sans-serif;
-      width: 100%;
-      transition: background 0.2s;
-    }
-
-    .copy-action-btn:hover {
-      background: #38bdf8;
-      box-shadow: 0 0 15px #00f0ff;
-    }
-
-    /* TOAST THANK YOU POPUP ALERTS */
-    .thankyou-toast {
-      position: fixed;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(90deg, #00f0ff, #00a2ff);
-      color: #030306;
-      padding: 12px 30px;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 1px;
-      z-index: 700;
-      box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
-      font-family: 'Orbitron', sans-serif;
-      animation: toastFadeInOut 2s forwards;
-      text-transform: uppercase;
-    }
-
-    @keyframes toastFadeInOut {
-      0% { opacity: 0; bottom: 20px; }
-      15% { opacity: 1; bottom: 40px; }
-      85% { opacity: 1; bottom: 40px; }
-      100% { opacity: 0; bottom: 20px; }
-    }
-
-    .gallery-matrix-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-bottom: 25px;
-    }
-
-    .gallery-asset-frame {
-      width: 100%;
-      height: 100px;
-      background: #01040a;
-      border: 1px dashed rgba(0, 240, 255, 0.3);
-      border-radius: 4px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #64748b;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    .terminal-console-box {
-      background: #010206;
-      border: 1px solid rgba(0, 240, 255, 0.2);
-      border-radius: 4px;
-      padding: 16px;
-      text-align: left;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 0.85rem;
-      color: #a7f3d0;
-      line-height: 1.6;
-      margin-bottom: 25px;
-      max-height: 200px;
-      overflow-y: auto;
-    }
-
-    .terminal-ln { display: block; }
-    .terminal-accent { color: #00f0ff; }
+    <meta name="google-site-verification" content="j42vtUwLL_LwMXJPJtmKJcwp85MK1iFyc_2smX30Nr8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krrish | Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    .terminal-cursor {
-      display: inline-block;
-      width: 8px;
-      height: 15px;
-      background: #00f0ff;
-      margin-left: 4px;
-      animation: cursorBlink 0.8s infinite;
-      vertical-align: middle;
-    }
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030712;
+        }
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .cyber-grid {
+            background-image: linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        .scanline::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        
+        /* Elastic Bounce Keyframes for Access Granted Badge */
+        @keyframes elasticBounce {
+            0% { transform: translate(-50%, 150%) scale(0.9); opacity: 0; }
+            45% { transform: translate(-50%, -25px) scale(1.05); opacity: 1; }
+            65% { transform: translate(-50%, 5px) scale(0.98); }
+            80% { transform: translate(-50%, -2px) scale(1.01); }
+            100% { transform: translate(-50%, 0) scale(1); opacity: 1; }
+        }
+        
+        /* Smooth Slide-Out Keyframes */
+        @keyframes slideOut {
+            0% { transform: translate(-50%, 0) scale(1); opacity: 1; }
+            100% { transform: translate(-50%, 150%) scale(0.9); opacity: 0; }
+        }
+        
+        /* Combined Toast Flow Animation */
+        .toast-flow {
+            animation: 
+                elasticBounce 0.8s cubic-bezier(0.25, 1.1, 0.5, 1.1) forwards,
+                slideOut 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards 2.3s;
+        }
 
-    @keyframes cursorBlink {
-      50% { opacity: 0; }
-    }
-
-    .modal-close-trigger, .thanks-visit-btn {
-      background: transparent;
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 12px 30px;
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      cursor: pointer;
-      transition: all 0.3s;
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    .modal-close-trigger:hover {
-      background: #ffffff;
-      color: #030306;
-    }
-
-    .thanks-visit-btn {
-      background: linear-gradient(90deg, rgba(0, 240, 255, 0.8), rgba(0, 162, 255, 0.8));
-      color: #030306;
-      border: none;
-      border-radius: 4px;
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
-      text-transform: uppercase;
-    }
-
-    .thanks-visit-btn:hover {
-      box-shadow: 0 0 25px #00f0ff;
-      transform: scale(1.03);
-    }
-
-    .glowing-back-btn {
-      background: transparent;
-      color: #00f0ff;
-      border: 2px solid #00f0ff;
-      padding: 14px 35px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      border-radius: 4px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      cursor: pointer;
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
-      transition: all 0.3s ease;
-      display: inline-block;
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    .glowing-back-btn:hover {
-      background: rgba(0, 240, 255, 0.08);
-      box-shadow: 0 0 30px rgba(0, 240, 255, 0.6), inset 0 0 15px rgba(0, 240, 255, 0.2);
-      transform: translateY(-2px);
-    }
-
-    .countdown-bar-wrapper {
-      width: 100%;
-      height: 2px;
-      background: rgba(255, 62, 62, 0.1);
-      margin-top: 20px;
-      border-radius: 1px;
-      overflow: hidden;
-    }
-
-    .countdown-bar-fill {
-      width: 100%;
-      height: 100%;
-      background: #ff3e3e;
-    }
-
-    @keyframes panelReveal {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes modalScaleUp {
-      from { transform: scale(0.92); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    @media (max-width: 768px) {
-      .shrunk-center-status { width: 90%; text-align: center; font-size: 0.65rem; letter-spacing: 1.5px; position: absolute; }
-      .top-navbar {
-        top: auto; bottom: 20px; right: 50%;
-        transform: translateX(50%); width: 92%;
-        justify-content: center;
-      }
-      .hero-interface {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding-top: 90px;
-      }
-      .hero-left-column, .hero-right-column { width: 100%; }
-      .hero-left-column h1 { font-size: 3.4rem; margin-top: 35px; }
-      .dashboard-split-layout { flex-direction: column; gap: 30px; }
-      .details-left-segment, .services-right-segment { width: 100%; }
-      .projects-matrix-grid { grid-template-columns: 1fr; }
-      .gallery-matrix-grid { grid-template-columns: repeat(2, 1fr); }
-      .modal-title-text { font-size: 1.4rem; }
-    }
-  </style>
+        /* Welcome Toast Smooth Fade In & Dissolve */
+        @keyframes welcomeIn {
+            0% { transform: translate(-50%, 120%) scale(0.95); opacity: 0; }
+            100% { transform: translate(-50%, 0) scale(1); opacity: 1; }
+        }
+        @keyframes welcomeDissolve {
+            0% { opacity: 1; filter: blur(0px); }
+            100% { opacity: 0; filter: blur(8px); }
+        }
+        .welcome-flow {
+            animation: 
+                welcomeIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards,
+                welcomeDissolve 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards 3.5s;
+        }
+    </style>
 </head>
-<body>
+<body class="text-gray-100 overflow-x-hidden min-h-screen relative cyber-grid scanline">
 
-  <!-- DOWNSIDE DYNAMIC JUMP AND DISSOLVE ASSET BARS ACCORDING TO PLAN -->
-  <div class="dynamic-access-granted-box">[ ACCESS GRANTED ]</div>
-  <div class="theme-matched-welcome-toast">Welcome to Krrish's Developer & Creator Stage.</div>
+    <!-- Top Glow Effects -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-10 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-  <div class="system-grid"></div>
-  <div class="ambient-blue-glow"></div>
-
-  <!-- CONTACT POPUP MODAL -->
-  <div id="contactPopupModal" class="modal-overlay-screen hidden">
-    <div class="modal-dialogue-box">
-      <div class="modal-title-text">SECURE NODE: CONTACT</div>
-      
-      <div class="advanced-contact-matrix">
-        <div class="contact-matrix-row" onclick="openEmailMiniScreen()">
-          <span class="contact-matrix-label">Email Portal</span>
-          <span class="contact-matrix-value value-active">krrishkumar92634@gmail.com</span>
-        </div>
-        <div class="contact-matrix-row" onclick="triggerWittyLinkError('GitHub Node')">
-          <span class="contact-matrix-label">GitHub Node</span>
-          <span class="contact-matrix-value value-offline">[CONNECTION OFFLINE]</span>
-        </div>
-        <div class="contact-matrix-row" onclick="triggerWittyLinkError('Social Feed')">
-          <span class="contact-matrix-label">Social Feed</span>
-          <span class="contact-matrix-value value-offline">[NETWORK LINK BUILDING]</span>
-        </div>
-        <p class="more-details-flag">More details will be available soon...</p>
-      </div>
-
-      <button class="modal-close-trigger" onclick="toggleModalView('contactPopupModal', false)">DISCONNECT TERMINAL</button>
-    </div>
-  </div>
-
-  <!-- NEW SMART MINI SCREEN FOR EMAIL COPY HUB -->
-  <div id="emailMiniScreen" class="mini-screen-overlay hidden">
-    <div class="mini-dialogue-box">
-      <div class="skills-section-title" style="color: #00f0ff;">> EMAIL UTILITY HUB</div>
-      <div class="mini-email-display" id="targetEmailString">krrishkumar92634@gmail.com</div>
-      <button class="copy-action-btn" onclick="executeEmailCopySequence()">Copy Email Address</button>
-      <button class="modal-close-trigger" style="margin-top: 10px; width: 100%; padding: 8px;" onclick="toggleModalView('emailMiniScreen', false)">CANCEL</button>
-    </div>
-  </div>
-
-  <!-- AUTOMATIC DYNAMIC THANK YOU TOAST CONTAINER -->
-  <div id="thankYouToast" class="thankyou-toast hidden">
-    Thank you! Email copied successfully.
-  </div>
-
-  <!-- WITTY INTERACTIVE LINK ERROR POPUP ROUTER NODE -->
-  <div id="wittyErrorModal" class="modal-overlay-screen hidden">
-    <div class="modal-dialogue-box" style="border-color: #fcd34d; box-shadow: 0 0 30px rgba(252, 211, 77, 0.15);">
-      <div class="modal-title-text" style="color: #fcd34d;" id="wittyModalTitle">> NODE LINK OVERLOAD</div>
-      
-      <div class="terminal-console-box" style="color: #fcd34d; border-color: rgba(252, 211, 77, 0.2);">
-        <span class="terminal-ln">> STATUS: <span style="color: #ff5555;">[LINK_NOT_FOUND]</span></span>
-        <span class="terminal-ln">> TRACE: Core index path is currently offline.</span>
-        <span class="terminal-ln">> REASON: Krrish is focused on learning Front-End engineering blueprints.</span>
-        <span class="terminal-ln">> ROADMAP: Integration scheduled for upcoming roadmap iterations.</span>
-      </div>
-
-      <button class="modal-close-trigger" onclick="toggleModalView('wittyErrorModal', false)">CLOSE DEBUGGER</button>
-    </div>
-  </div>
-
-  <!-- ACTIVE PRODUCTION ASSETS GALLERY MODAL -->
-  <div id="galleryPopupModal" class="modal-overlay-screen hidden">
-    <div class="modal-dialogue-box">
-      <div class="modal-title-text">VISUAL ASSETS DIRECTORY</div>
-      <div class="modal-desc-text" style="text-align: center; margin-bottom: 15px;">Displaying local active system assets configured for network node framework:</div>
-      
-      <div class="gallery-matrix-grid">
-        <div class="gallery-asset-frame"><span>[ Coding Space ]</span></div>
-        <div class="gallery-asset-frame"><span>[ Cyber Aesthetic ]</span></div>
-        <div class="gallery-asset-frame"><span>[ UI Blueprint ]</span></div>
-        <div class="gallery-asset-frame" style="color: #475569;"><span>[ Node Slot 04 ]</span></div>
-        <div class="gallery-asset-frame" style="color: #475569;"><span>[ Node Slot 05 ]</span></div>
-        <div class="gallery-asset-frame" style="color: #475569;"><span>[ Node Slot 06 ]</span></div>
-      </div>
-      
-      <p class="more-details-flag" style="margin-bottom: 20px;">Live image directories getting configured for network deployment.</p>
-      <button class="modal-close-trigger" onclick="toggleModalView('galleryPopupModal', false)">CLOSE DIRECTORY</button>
-    </div>
-  </div>
-
-  <!-- MID-SCREEN CAPABILITY OVERLAY INTERFACE -->
-  <div id="servicesMiddleModal" class="modal-overlay-screen hidden">
-    <div class="modal-dialogue-box">
-      <div class="modal-title-text">WEB ARCHITECTURE SERVICES</div>
-      <div class="modal-desc-text">
-        I specialize in designing and engineering custom digital platforms. From corporate landing setups to highly customized website blueprints tailored explicitly for private businesses, luxury hotels, and hospitality ventures, I build scalable layouts optimized for maximum user experience.
-        <br><br>
-        <span style="color:#38bdf8; font-weight:700;">Interested in expanding your digital scale? Please initiate a contract inquiry.</span>
-      </div>
-      <button class="thanks-visit-btn" onclick="closeCapabilityAndFocus()">Thanks For Visit</button>
-    </div>
-  </div>
-
-  <!-- DYNAMIC AUTOMATIC TIMEOUT POPUP MODAL (YouTube Redirect Logic) -->
-  <div id="youtubeTimeoutModal" class="modal-overlay-screen hidden">
-    <div class="modal-dialogue-box youtube-alert-border">
-      <div class="modal-title-text" style="color: #ff3e3e;">CHANNEL INTERFACE</div>
-      <div class="modal-desc-text" style="text-align: center; margin-bottom: 10px;">
-        The official digital broadcasting terminal is currently undergoing asset configuration.
-        <br><br>
-        <span style="color: #94a3b8; font-size: 0.9rem; font-weight: 600;">Status: AVAILABLE SOON</span>
-      </div>
-      <p style="font-size: 0.8rem; color: #64748b;">Automatically returning to mainframe matrix...</p>
-      <div class="countdown-bar-wrapper">
-        <div id="countdownBar" class="countdown-bar-fill"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- INTERACTIVE PROJECT ALPHA COMMAND NODE MODULE -->
-  <div id="projectAlphaModal" class="modal-overlay-screen hidden">
-    <div class="modal-dialogue-box">
-      <div class="modal-title-text">PROJECT ALPHA CORE CONSOLE</div>
-      
-      <div class="terminal-console-box">
-        <span class="terminal-ln"><span class="terminal-accent">krrish@core:~$</span> inspect --node alpha_terminal</span>
-        <span class="terminal-ln">> Initializing diagnostic blueprint sync...</span>
-        <span class="terminal-ln">> Verifying semantic architecture... <span class="terminal-accent">[OK]</span></span>
-        <span class="terminal-ln">> Loading dynamic CSS modules & animators... <span class="terminal-accent">[OK]</span></span>
-        <span class="terminal-ln" style="color: #fcd34d;">> [WARN] External API access is currently restricted.</span>
-        <span class="terminal-ln">> STATUS: DEPLOYING CODING BLUEPRINTS... <span class="terminal-accent">[SUCCESS]</span></span>
-        <span class="terminal-ln" style="margin-top: 5px;"><span class="terminal-accent">krrish@core:~$</span><span class="terminal-cursor"></span></span>
-      </div>
-
-      <button class="modal-close-trigger" onclick="toggleModalView('projectAlphaModal', false)">EXIT CORE TERMINAL</button>
-    </div>
-  </div>
-
-
-  <div class="top-navbar">
-    <button class="nav-btn" onclick="toggleModalView('contactPopupModal', true)">CONTACT</button>
-    <button class="nav-btn" onclick="toggleModalView('galleryPopupModal', true)">GALLERY</button>
-  </div>
-
-  <div class="viewport-wrapper">
-    
-    <section id="mainHeroHomepage" class="hero-interface">
-      <canvas id="cyberMeshCanvas"></canvas>
-      
-      <!-- STATUS BADGE EMBEDDED SAFELY INSIDE HERO VIEWPORT ONLY WITH ABSOLUTE POSITIONING -->
-      <div id="dynamicGreeterBadge" class="shrunk-center-status">[ S T A T U S : LOADING MATRIX ]</div>
-
-      <div class="hero-left-column">
-        <div class="hero-structural-spacer"></div>
-        <h1>Krrish Kumar<br>Singh</h1>
+    <!-- Main Container -->
+    <div class="max-w-4xl mx-auto px-4 pt-16 pb-24 relative z-10">
         
-        <div class="professional-manifesto">
-          Exploring the world of <span id="typedElement" class="typed-text"></span>
-        </div>
-        
-        <button class="primary-trigger-btn" onclick="revealProfilePanel()">Know More About Me</button>
-      </div>
-
-      <div class="hero-right-column hud-brackets-decor">
-        <div class="frame-header-name">KRRISH</div>
-        <div class="premium-border-frame">
-          <div class="image-viewport">
-            <canvas id="matrixPortraitCanvas"></canvas>
-            <img src="https://i.ibb.co/99ZtNCjR/1768792554257.jpg" alt="Krrish Kumar Singh Official Portrait Profile">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="expandedProfilePanel" class="profile-dashboard-panel hidden">
-      <div class="panel-main-header">MY ACADEMIC PATHWAY & SKILL METRICS</div>
-      
-      <div class="dashboard-split-layout">
-        
-        <div class="details-left-segment">
-          <div class="info-data-card">
-            <label>Current Status & Activity</label>
-            <p>Undergraduate student blending academics with a passion for digital creativity. Currently in the learning phase of advanced front-end development technologies and designing custom layouts.</p>
-          </div>
-          
-          <div class="info-data-card">
-            <label>Secondary Education (10th Standard)</label>
-            <p><strong>MAHENDRA MUNI TARA SHRI CHANDRA BAID ASHRAM, MADHUPUR</strong><br>District: Deoghar, Jharkhand | Board: CBSE | Academic Performance: <strong>84.00%</strong> (Passed Out: 2023)</p>
-          </div>
-
-          <div class="info-data-card">
-            <label>Higher Secondary Education (12th Standard)</label>
-            <p><strong>+2 HIGH SCHOOL, SARWAN</strong><br>District: Deoghar, Jharkhand | Core Stream: Mathematics, Physics, Chemistry (PCM)<br>Academic Performance: <strong>75.20%</strong> (Passed Out: 2025)</p>
-          </div>
-
-          <div class="info-data-card">
-            <label>Undergraduate Program (Current)</label>
-            <p><strong>Bachelor of Arts (B.A.)</strong><br>Core Academic Field: English Honors</p>
-          </div>
-        </div>
-
-        <div class="services-right-segment">
-          <div class="commercial-box-wrapper">
-            <div class="service-prompt-title">Commercial Solutions</div>
-            <div class="service-prompt-desc">Discover tailored technical assets and web architectures engineered for corporate applications.</div>
-            <button class="open-slide-panel-btn" onclick="toggleModalView('servicesMiddleModal', true)">View Capability Index</button>
-          </div>
-
-          <div class="skills-architecture-container">
-            <div>
-              <div class="skills-section-title" style="margin-bottom: 8px;">Current Learning Phase</div>
-              <div class="skills-grid-layout">
-                <span class="skill-node-tag">HTML5 Core</span>
-                <span class="skill-node-tag">CSS3 Layouts</span>
-                <span class="skill-node-tag">JavaScript ES6</span>
-                <span class="skill-node-tag">Responsive Core UX</span>
-              </div>
+        <!-- Profile / Header Section -->
+        <header class="text-center mb-16">
+            <div class="relative inline-block mb-6">
+                <!-- Outer Tech Ring -->
+                <div class="absolute -inset-1.5 bg-gradient-to-r bounding-box-glow from-emerald-500 to-cyan-500 rounded-full opacity-75 blur-sm animate-pulse"></div>
+                <!-- Profile Image / Avatar Placeholder -->
+                <div class="relative w-32 h-32 bg-gray-900 rounded-full border-2 border-emerald-400 flex items-center justify-center overflow-hidden">
+                    <i class="fa-solid fa-user-astronaut text-5xl text-emerald-400"></i>
+                </div>
+                <!-- Status Dot -->
+                <span class="absolute bottom-1 right-2 flex h-4 w-4">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-gray-900"></span>
+                </span>
             </div>
             
-            <div>
-              <div class="skills-section-title" style="margin-bottom: 8px; color: #94a3b8;">Future Exploration Node</div>
-              <div class="skills-grid-layout">
-                <span class="skill-node-tag skill-future-tag">Web Animations</span>
-                <span class="skill-node-tag skill-future-tag">Canvas Graphics</span>
-                <span class="skill-node-tag skill-future-tag">UI/UX Blueprints</span>
-              </div>
-            </div>
-          </div>
-        </div>
+            <h1 class="heading-font text-4xl md:text-5xl font-bold tracking-tight text-white mb-2">
+                Krrish <span class="text-emerald-400 font-light">_</span>
+            </h1>
+            <p class="text-cyan-400 font-mono tracking-widest text-xs uppercase mb-4">
+                [ Next-Gen Developer & Content Creator ]
+            </p>
+            <p class="text-gray-400 max-w-md mx-auto text-sm leading-relaxed">
+                Building sleek frontend architectures and crafting epic digital stories. Welcome to my personal mainframe node.
+            </p>
+        </header>
 
-      </div>
-
-      <div class="projects-workspace-section">
-        <div class="workspace-subheading">01 // RECENT ASSETS & PROJECTS</div>
-        <div class="projects-matrix-grid">
-          
-          <div class="project-terminal-card">
-            <div>
-              <div class="project-card-header">
-                <div class="project-card-title" style="letter-spacing: 1px; color: #00f0ff;">CYBER CORE ARTS</div>
-                <span class="project-status-badge badge-live" style="background: rgba(255, 62, 62, 0.1); color: #ff5555; border: 1px solid rgba(255,62,62,0.15)">Broadcasting Network</span>
-              </div>
-              <p class="project-card-desc">Providing high-end conceptual blueprints, deep dives into website working conditions, modular interface animations, and specialized front-end asset engineering tutorial workflows.</p>
-            </div>
+        <!-- Social & Quick Links Grid -->
+        <main class="max-w-xl mx-auto space-y-4">
             
-            <button class="youtube-trigger-btn" onclick="triggerYoutubeRedirectAction()">
-              <svg viewBox="0 0 24 24">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-              </svg>
-              Launch Channel
-            </button>
-          </div>
+            <!-- YouTube Channel Link -->
+            <a href="https://youtube.com/@epicministory" target="_blank" class="group relative flex items-center p-4 bg-gray-900/60 border border-gray-800 rounded-xl hover:border-red-500/50 transition-all duration-300 backdrop-blur-sm overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-red-600/0 via-red-600/5 to-red-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                <div class="w-12 h-12 bg-red-950/40 border border-red-900/40 rounded-lg flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-brands fa-youtube text-xl"></i>
+                </div>
+                <div class="ml-4 text-left flex-1">
+                    <h3 class="text-sm font-semibold text-gray-200 group-hover:text-red-400 transition-colors">Epic Mini Story</h3>
+                    <p class="text-xs text-gray-400">Watch my latest creative video productions</p>
+                </div>
+                <div class="text-gray-500 group-hover:text-red-400 transition-colors pr-1">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </div>
+            </a>
 
-          <div class="project-terminal-card">
-            <div>
-              <div class="project-card-header">
-                <span class="project-card-title" style="color: #00f0ff;">Project Alpha Terminal</span>
-                <span class="project-status-badge badge-build">In Build Pipeline</span>
-              </div>
-              <p class="project-card-desc">Engineering an advanced, highly modular personal platform interface matrix using clean, lightweight interactive semantic front-end logic architecture frameworks.</p>
-            </div>
-            
-            <button class="inspect-trigger-btn" onclick="toggleModalView('projectAlphaModal', true)">
-              <svg viewBox="0 0 24 24">
-                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 12H4v-2h8v2zm8-4H4V9h16v3z"/>
-              </svg>
-              Inspect Node
-            </button>
-          </div>
+            <!-- GitHub Link -->
+            <a href="https://github.com/krrish0926" target="_blank" class="group relative flex items-center p-4 bg-gray-900/60 border border-gray-800 rounded-xl hover:border-emerald-500/50 transition-all duration-300 backdrop-blur-sm overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-emerald-600/0 via-emerald-600/5 to-emerald-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                <div class="w-12 h-12 bg-emerald-950/40 border border-emerald-900/40 rounded-lg flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-brands fa-github text-xl"></i>
+                </div>
+                <div class="ml-4 text-left flex-1">
+                    <h3 class="text-sm font-semibold text-gray-200 group-hover:text-emerald-400 transition-colors">GitHub Node</h3>
+                    <p class="text-xs text-gray-400">Explore my code repositories & open source source files</p>
+                </div>
+                <div class="text-gray-500 group-hover:text-emerald-400 transition-colors pr-1">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </div>
+            </a>
 
+            <!-- Instagram Link -->
+            <a href="#" class="group relative flex items-center p-4 bg-gray-900/60 border border-gray-800 rounded-xl hover:border-pink-500/50 transition-all duration-300 backdrop-blur-sm overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-pink-600/0 via-pink-600/5 to-pink-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                <div class="w-12 h-12 bg-pink-950/40 border border-pink-900/40 rounded-lg flex items-center justify-center text-pink-400 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                </div>
+                <div class="ml-4 text-left flex-1">
+                    <h3 class="text-sm font-semibold text-gray-200 group-hover:text-pink-400 transition-colors">Instagram</h3>
+                    <p class="text-xs text-gray-400">Sneak peeks into my life & daily design inspirations</p>
+                </div>
+                <div class="text-gray-500 group-hover:text-pink-400 transition-colors pr-1">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </div>
+            </a>
+
+            <!-- Contact / Email Link -->
+            <a href="mailto:your-email@gmail.com" class="group relative flex items-center p-4 bg-gray-900/60 border border-gray-800 rounded-xl hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-sm overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-600/0 via-cyan-600/5 to-cyan-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                <div class="w-12 h-12 bg-cyan-950/40 border border-cyan-900/40 rounded-lg flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-envelope text-xl"></i>
+                </div>
+                <div class="ml-4 text-left flex-1">
+                    <h3 class="text-sm font-semibold text-gray-200 group-hover:text-cyan-400 transition-colors">Secure Uplink</h3>
+                    <p class="text-xs text-gray-400">Drop an email for collaborations or project inquiries</p>
+                </div>
+                <div class="text-gray-500 group-hover:text-cyan-400 transition-colors pr-1">
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </div>
+            </a>
+
+        </main>
+
+        <!-- Footer Systems Status -->
+        <footer class="mt-20 text-center font-mono text-[10px] text-gray-600 tracking-wider">
+            <p>© 2026 KRRISH. ALL SYSTEMS OPERATIONAL // LEVEL_01_SECURE</p>
+        </footer>
+
+    </div>
+
+    <!-- Phase 1: Access Granted Toast (Bounces up, stays 1.5s, slides down) -->
+    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-emerald-500 text-gray-950 font-mono text-xs font-bold px-5 py-2.5 rounded-full shadow-lg shadow-emerald-500/20 flex items-center space-x-2 border border-emerald-400 tracking-wider pointer-events-none opacity-0 toast-flow">
+        <i class="fa-solid fa-circle-check text-sm animate-pulse"></i>
+        <span>[ SYSTEM ACCESS GRANTED ]</span>
+    </div>
+
+    <!-- Phase 2: Welcome Toast (Fades in immediately after Phase 1, then dissolves into air) -->
+    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-gray-900/95 text-cyan-400 font-mono text-xs px-5 py-2.5 rounded-xl shadow-2xl shadow-cyan-500/10 flex items-center space-x-3 border border-cyan-500/30 tracking-wide opacity-0 welcome-flow" style="animation-delay: 3s;">
+        <div class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
         </div>
-      </div>
-
-      <button class="glowing-back-btn" onclick="returnToMainView()">Get Back</button>
-    </section>
-
-  </div>
-
-  <script>
-    // INITIALIZATION ROUTINE LOADING ENGINES PARALLELLY ON IMMEDIATE LOAD
-    document.addEventListener("DOMContentLoaded", function() {
-      resizeMeshCanvas();
-      animateNetworkMesh();
-      initializeDynamicTimeGreeter(); 
-      setTimeout(executeTypingAnimation, 500); 
-    });
-
-    // FIXED TYPEWRITER LOOP ENGINE
-    const wordsArray = ["Web Design.", "Front-End Architecture.", "Digital Creativity."];
-    let currentWordIndex = 0;
-    let currentCharIndex = 0;
-    let isDeleting = false;
-    const typingSpeed = 100;
-    const erasingSpeed = 50;
-    const newWordDelay = 2000;
-    const typedTextSpan = document.getElementById("typedElement");
-
-    function executeTypingAnimation() {
-      if (!typedTextSpan) return;
-      const currentFullText = wordsArray[currentWordIndex];
-      
-      if (isDeleting) {
-        typedTextSpan.textContent = currentFullText.substring(0, currentCharIndex - 1);
-        currentCharIndex--;
-      } else {
-        typedTextSpan.textContent = currentFullText.substring(0, currentCharIndex + 1);
-        currentCharIndex++;
-      }
-
-      if (!isDeleting && currentCharIndex === currentFullText.length) {
-        isDeleting = true;
-        setTimeout(executeTypingAnimation, newWordDelay);
-      } else if (isDeleting && currentCharIndex === 0) {
-        isDeleting = false;
-        currentWordIndex = (currentWordIndex + 1) % wordsArray.length;
-        setTimeout(executeTypingAnimation, 500);
-      } else {
-        setTimeout(executeTypingAnimation, isDeleting ? erasingSpeed : typingSpeed);
-      }
-    }
-
-    // FIXED SHRUNK CENTER STATUS TIME ENGINE
-    function initializeDynamicTimeGreeter() {
-      const currentHour = new Date().getHours();
-      const targetGreeterBadge = document.getElementById("dynamicGreeterBadge");
-      if (!targetGreeterBadge) return;
-      
-      if (currentHour >= 5 && currentHour < 12) {
-        targetGreeterBadge.textContent = "[ S T A T U S : C O M P I L I N G   M O R N I N G   I D E A S . . . ]";
-      } else if (currentHour >= 12 && currentHour < 17) {
-        targetGreeterBadge.textContent = "[ S T A T U S : A F T E R N O O N   P R O D U C T I O N . . . ]";
-      } else if (currentHour >= 17 && currentHour < 21) {
-        targetGreeterBadge.textContent = "[ S T A T U S : E V E N I N G   G R I N D   A C T I V E . . . ]";
-      } else {
-        targetGreeterBadge.textContent = "[ S T A T U S : L A T E   N I G H T   C O D I N G   P H A S E . . . ]";
-      }
-    }
-
-    // CYBERPUNK MESH NETWORK BACKGROUND ENGINE
-    const canvasMesh = document.getElementById("cyberMeshCanvas");
-    const ctxMesh = canvasMesh.getContext("2d");
-    let nodesArray = [];
-    let mouseCoordinates = { x: null, y: null, radius: 140 };
-
-    function resizeMeshCanvas() {
-      if (!canvasMesh) return;
-      canvasMesh.width = canvasMesh.parentElement.offsetWidth;
-      canvasMesh.height = canvasMesh.parentElement.offsetHeight;
-      initNetworkMesh(); 
-    }
-    window.addEventListener("resize", resizeMeshCanvas);
-
-    window.addEventListener("mousemove", function(event) {
-      const bounds = canvasMesh.getBoundingClientRect();
-      mouseCoordinates.x = event.clientX - bounds.left;
-      mouseCoordinates.y = event.clientY - bounds.top;
-    });
-    
-    window.addEventListener("mouseout", function() {
-      mouseCoordinates.x = null;
-      mouseCoordinates.y = null;
-    });
-
-    class NetworkNode {
-      constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.speedX = (Math.random() * 0.4) - 0.2;
-        this.speedY = (Math.random() * 0.4) - 0.2;
-        this.radius = Math.random() * 2 + 1;
-      }
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-
-        if (this.x > canvasMesh.width || this.x < 0) this.speedX = -this.speedX;
-        if (this.y > canvasMesh.height || this.y < 0) this.speedY = -this.speedY;
-
-        if (mouseCoordinates.x != null && mouseCoordinates.y != null) {
-          let dx = this.x - mouseCoordinates.x;
-          let dy = this.y - mouseCoordinates.y;
-          let distance = Math.sqrt(dx*dx + dy*dy);
-          if (distance < mouseCoordinates.radius) {
-            if (mouseCoordinates.x < this.x && this.x < canvasMesh.width - 10) this.x += 1;
-            if (mouseCoordinates.x > this.x && this.x > 10) this.x -= 1;
-            if (mouseCoordinates.y < this.y && this.y < canvasMesh.height - 10) this.y += 1;
-            if (mouseCoordinates.y > this.y && this.y > 10) this.y -= 1;
-          }
-        }
-      }
-      draw() {
-        ctxMesh.fillStyle = "rgba(0, 240, 255, 0.4)";
-        ctxMesh.beginPath();
-        ctxMesh.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctxMesh.fill();
-      }
-    }
-
-    function initNetworkMesh() {
-      nodesArray = [];
-      let numberOfNodes = Math.floor((canvasMesh.width * canvasMesh.height) / 14000);
-      
-      const isMobileDevice = window.innerWidth <= 768;
-      if (isMobileDevice) {
-        if(numberOfNodes > 20) numberOfNodes = 20; 
-      } else {
-        if(numberOfNodes > 55) numberOfNodes = 55; 
-      }
-
-      for (let i = 0; i < numberOfNodes; i++) {
-        let x = Math.random() * canvasMesh.width;
-        let y = Math.random() * canvasMesh.height;
-        nodesArray.push(new NetworkNode(x, y));
-      }
-    }
-
-    function drawMeshLinks() {
-      for (let a = 0; a < nodesArray.length; a++) {
-        for (let b = a; b < nodesArray.length; b++) {
-          let dx = nodesArray[a].x - nodesArray[b].x;
-          let dy = nodesArray[a].y - nodesArray[b].y;
-          let distance = Math.sqrt(dx*dx + dy*dy);
-
-          if (distance < 110) {
-            let opacity = (1 - (distance / 110)) * 0.15;
-            ctxMesh.strokeStyle = "rgba(0, 240, 255, " + opacity + ")";
-            ctxMesh.lineWidth = 1;
-            ctxMesh.beginPath();
-            ctxMesh.moveTo(nodesArray[a].x, nodesArray[a].y);
-            ctxMesh.lineTo(nodesArray[b].x, nodesArray[b].y);
-            ctxMesh.stroke();
-          }
-        }
-      }
-    }
-
-    function animateNetworkMesh() {
-      ctxMesh.clearRect(0, 0, canvasMesh.width, canvasMesh.height);
-      for (let i = 0; i < nodesArray.length; i++) {
-        nodesArray[i].update();
-        nodesArray[i].draw();
-      }
-      drawMeshLinks();
-      requestAnimationFrame(animateNetworkMesh);
-    }
-
-    // EMAIL UTILITY MANAGEMENT HUB METHODS
-    function openEmailMiniScreen() {
-      toggleModalView('emailMiniScreen', true);
-    }
-
-    function executeEmailCopySequence() {
-      const emailText = document.getElementById('targetEmailString').textContent;
-      
-      navigator.clipboard.writeText(emailText).then(function() {
-        const toast = document.getElementById('thankYouToast');
-        toast.classList.remove('hidden');
-
-        setTimeout(function() {
-          toast.classList.add('hidden'); 
-          toggleModalView('emailMiniScreen', false); 
-          toggleModalView('contactPopupModal', false); 
-        }, 2000);
-
-      }).catch(function(err) {
-        console.error('Could not copy text: ', err);
-      });
-    }
-
-    // INTERACTIVE WITTY LINK ERROR POPUP ROUTER FOR OFFLINE NODES
-    function triggerWittyLinkError(nodeLabelName) {
-      const targetModal = document.getElementById("wittyErrorModal");
-      const titleElement = document.getElementById("wittyModalTitle");
-      titleElement.textContent = "> ERROR 404: " + nodeLabelName.toUpperCase() + "_NOT_FOUND";
-      targetModal.classList.remove("hidden");
-    }
-
-    // DIGITAL MATRIX CODE RAIN EFFECT ON PHOTO FRAME
-    const canvasMatrix = document.getElementById("matrixPortraitCanvas");
-    const ctxMatrix = canvasMatrix.getContext("2d");
-    canvasMatrix.width = 310;
-    canvasMatrix.height = 400;
-    const matrixChars = "0101010101ABCDEFGHIJKLMNOPQRSTUVWXYZ<>[]+-$#";
-    const charArr = matrixChars.split("");
-    const fontSize = 10;
-    const columns = canvasMatrix.width / fontSize;
-    const dropsArr = [];
-    for (let x = 0; x < columns; x++) dropsArr[x] = 1;
-
-    function drawMatrixRainEffect() {
-      ctxMatrix.fillStyle = "rgba(1, 1, 3, 0.08)";
-      ctxMatrix.fillRect(0, 0, canvasMatrix.width, canvasMatrix.height);
-      ctxMatrix.fillStyle = "rgba(0, 240, 255, 0.4)";
-      ctxMatrix.font = fontSize + "px monospace";
-
-      for (let i = 0; i < dropsArr.length; i++) {
-        const text = charArr[Math.floor(Math.random() * charArr.length)];
-        ctxMatrix.fillText(text, i * fontSize, dropsArr[i] * fontSize);
-        if (dropsArr[i] * fontSize > canvasMatrix.height && Math.random() > 0.975) {
-          dropsArr[i] = 0;
-        }
-        dropsArr[i]++;
-      }
-    }
-    setInterval(drawMatrixRainEffect, 33);
-
-    function toggleModalView(modalId, shouldOpen) {
-      const modalElement = document.getElementById(modalId);
-      if(shouldOpen) {
-        modalElement.classList.remove('hidden');
-      } else {
-        modalElement.classList.add('hidden');
-      }
-    }
-
-    // PROFILE EXPANSION PANEL CONTROLLERS
-    function revealProfilePanel() {
-      const panel = document.getElementById('expandedProfilePanel');
-      panel.classList.remove('hidden');
-      panel.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function returnToMainView() {
-      document.getElementById('mainHeroHomepage').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function closeCapabilityAndFocus() {
-      toggleModalView('servicesMiddleModal', false);
-      document.getElementById('expandedProfilePanel').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function triggerYoutubeRedirectAction() {
-      const targetModal = document.getElementById('youtubeTimeoutModal');
-      const barFill = document.getElementById('countdownBar');
-      
-      barFill.style.animation = 'none';
-      barFill.offsetHeight; 
-      barFill.style.animation = 'shrinkBar 3s linear forwards';
-
-      targetModal.classList.remove('hidden');
-
-      setTimeout(function() {
-        targetModal.classList.add('hidden');
-        document.getElementById('expandedProfilePanel').scrollIntoView({ behavior: 'smooth' });
-      }, 3000);
-    }
-  </script>
+        <span>Welcome to Krrish's Developer & Creator Stage.</span>
+    </div>
 
 </body>
 </html>
