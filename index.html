@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Krrish Kumar</title>
+  <title>KRRISH KUMAR</title>
   
   <meta name="google-site-verification" content="j42vtUwLL_LwMXJPJtmKJcwp85MK1iFyc_2smX30Nr8" />
   
@@ -75,14 +75,14 @@
 
     .hidden { display: none !important; }
 
-    /* 🍔 ADVANCED HAMBURGER MENU FIXED ON THE LEFT SIDE */
+    /* 🍔 ADVANCED HAMBURGER MENU - FIXED COMPONENT WITH MOBILE TUNING */
     .nav-header-left-wrapper {
       position: fixed;
       top: 30px;
       left: 30px;
       display: flex;
       align-items: center;
-      z-index: 1000;
+      z-index: 4000; /* Increased to stay above standard content wrappers */
     }
     .hamburger-icon {
       width: 32px;
@@ -114,7 +114,7 @@
       width: 180px;
       padding: 10px;
       box-shadow: 0 0 25px rgba(0, 240, 255, 0.2);
-      z-index: 999;
+      z-index: 3999;
       backdrop-filter: blur(10px);
       transform: translateY(-20px);
       opacity: 0;
@@ -248,14 +248,14 @@
       pointer-events: none;
     }
 
-    /* CLASSIC TOP RIGHT NAVIGATION BUTTONS */
+    /* CLASSIC NAVIGATION BUTTONS WITH HIGH FLEXIBILITY OVERRIDE */
     .top-navbar {
       position: fixed;
       top: 30px;
       right: 30px;
       display: flex;
       gap: 15px;
-      z-index: 100;
+      z-index: 4000; /* Raised to match hamburger z-index bounds */
     }
 
     .nav-btn {
@@ -947,7 +947,7 @@
     /* STANDARD MODAL BLOCKS OVERLAYS */
     .modal-overlay-screen {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(2, 3, 7, 0.96); z-index: 3000; /* Raised up above the sub-page grid framework layers completely */
+      background: rgba(2, 3, 7, 0.96); z-index: 5000; /* Raised up above the sub-page grid framework layers completely */
       display: flex; justify-content: center; align-items: center;
     }
     .modal-dialogue-box {
@@ -976,12 +976,12 @@
     .value-active { font-family: 'Courier New', Courier, monospace; color: #00f0ff; font-weight: 700; }
     .value-offline { color: #64748b; font-size: 0.75rem; letter-spacing: 0.5px; }
     
-    .mini-screen-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2, 3, 7, 0.85); z-index: 3100; display: flex; justify-content: center; align-items: center; }
+    .mini-screen-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2, 3, 7, 0.85); z-index: 5200; display: flex; justify-content: center; align-items: center; }
     .mini-dialogue-box { background: #060e22; border: 1px solid #00f0ff; padding: 25px; border-radius: 4px; width: 90%; max-width: 400px; text-align: center; box-shadow: 0 0 30px rgba(0, 240, 255, 0.3); animation: modalScaleUp 0.2s ease-out; }
     .mini-email-display { background: #01040a; border: 1px solid rgba(0, 240, 255, 0.2); padding: 10px; font-family: monospace; color: #00f0ff; font-size: 0.95rem; margin: 15px 0; word-break: break-all; border-radius: 3px; }
     .copy-action-btn { background: #00f0ff; color: #030306; border: none; padding: 10px 20px; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; border-radius: 4px; cursor: pointer; text-transform: uppercase; font-family: 'Orbitron', sans-serif; width: 100%; transition: background 0.2s; }
     .copy-action-btn:hover { background: #38bdf8; box-shadow: 0 0 15px #00f0ff; }
-    .thankyou-toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, #00f0ff, #00a2ff); color: #030306; padding: 12px 30px; border-radius: 4px; font-weight: 700; font-size: 0.95rem; letter-spacing: 1px; z-index: 3200; box-shadow: 0 0 25px rgba(0, 240, 255, 0.5); font-family: 'Orbitron', sans-serif; animation: toastFadeInOut 2s forwards; text-transform: uppercase; }
+    .thankyou-toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, #00f0ff, #00a2ff); color: #030306; padding: 12px 30px; border-radius: 4px; font-weight: 700; font-size: 0.95rem; letter-spacing: 1px; z-index: 5500; box-shadow: 0 0 25px rgba(0, 240, 255, 0.5); font-family: 'Orbitron', sans-serif; animation: toastFadeInOut 2s forwards; text-transform: uppercase; }
     
     .terminal-console-box { background: #010206; border: 1px solid rgba(0, 240, 255, 0.2); border-radius: 4px; padding: 16px; text-align: left; font-family: 'Courier New', Courier, monospace; font-size: 0.85rem; color: #a7f3d0; line-height: 1.6; margin-bottom: 25px; max-height: 200px; overflow-y: auto; }
     .terminal-ln { display: block; }
@@ -991,18 +991,24 @@
     .countdown-bar-wrapper { width: 100%; height: 2px; background: rgba(255, 62, 62, 0.1); margin-top: 20px; border-radius: 1px; overflow: hidden; }
     .countdown-bar-fill { width: 100%; height: 100%; background: #ff3e3e; }
 
+    /* 📱 HARDCORE MOBILE RESPONSIVE TUNING */
     @media (max-width: 768px) {
       .collection-boxes-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery-matrix-grid { grid-template-columns: 1fr; }
       .shrunk-center-status { width: 90%; text-align: center; font-size: 0.65rem; letter-spacing: 1.5px; position: absolute; }
-      .nav-header-left-wrapper { top: auto; bottom: 20px; left: 30px; }
-      .top-navbar { top: auto; bottom: 20px; right: 30px; justify-content: flex-end; width: auto; gap: 10px; }
-      .dropdown-cyber-menu { top: auto; bottom: 75px; left: 30px; right: auto; }
-      .hero-interface { flex-direction: column-reverse; text-align: center; padding-top: 90px; }
+      
+      /* 🚨 FIXED BOTTOM CONFLICT OVERRIDE: Shifted elements cleanly back to header layers on viewport collapse */
+      .nav-header-left-wrapper { top: 25px; bottom: auto; left: 20px; }
+      .top-navbar { top: 25px; bottom: auto; right: 20px; justify-content: flex-end; width: auto; gap: 8px; }
+      .dropdown-cyber-menu { top: 70px; bottom: auto; left: 20px; right: auto; }
+      
+      .hero-interface { flex-direction: column-reverse; text-align: center; padding-top: 100px; }
       .hero-left-column, .hero-right-column { width: 100%; }
       .hero-left-column h1 { font-size: 3.4rem; margin-top: 35px; }
       .dashboard-split-layout { flex-direction: column; gap: 30px; }
       .details-left-segment, .services-right-segment { width: 100%; }
+      .skills-custom-grid { grid-template-columns: 1fr; }
+      .projects-matrix-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1165,7 +1171,7 @@
   </div>
 
   <div id="servicesMiddleModal" class="modal-overlay-screen hidden">
-    <div class="modal-dialogue-box">
+    <div class="modal-dialogue-box" style="z-index: 6000;">
       <div class="modal-title-text">WEB ARCHITECTURE SERVICES</div>
       <div class="modal-desc-text">
         I specialize in designing and engineering custom digital platforms. From corporate landing setups to highly customized website blueprints tailored explicitly for private businesses, luxury hotels, and hospitality ventures, I build scalable layouts optimized for maximum user experience.
@@ -1379,6 +1385,9 @@
   </div>
 
   <script>
+    // Global array tracker to intercept manual back triggers
+    let openModalsQueue = [];
+
     document.addEventListener("DOMContentLoaded", function() {
       resizeMeshCanvas(); animateNetworkMesh();
       initializeDynamicTimeGreeter(); initializeRealtimeCyberGreeting(); 
@@ -1411,19 +1420,17 @@
       toggleModalView('collectionSubPage', true);
     }
     
-    // 🎯 BOX INTERJECTION SEPARATION FIX
     function triggerNoImageAssetAlert() { 
-      // Displays the popup immediately without appending ghost queues
       toggleModalView('noImageAssetModal', true); 
     }
 
-    // 🎯 CLEAN INDEPENDENT STEP BACK FLOW
+    // 🎯 RE-ENGINEERED STEP BACK LOGIC WITH POPSTATE STABILITY
     function closeCollectionSubPageAndKeepGalleryOpen() {
-      toggleModalView('collectionSubPage', false); // Smooth exit from 10 slots grids page
-      toggleModalView('galleryPopupModal', true);   // Visual Directory keeps stable active!
+      toggleModalView('collectionSubPage', false); 
+      toggleModalView('galleryPopupModal', true);   
     }
 
-    // FULL GLOBAL SCROLL RESET STRIGHT TO HOME TOP
+    // FULL GLOBAL SCROLL RESET STRAIGHT TO HOME TOP
     function returnToMainView() {
       const targetHeader = document.getElementById('mainHeroHomepage');
       if(targetHeader) { targetHeader.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
@@ -1494,10 +1501,35 @@
     function drawMatrixRainEffect() { ctxMatrix.fillStyle = "rgba(1, 1, 3, 0.08)"; ctxMatrix.fillRect(0, 0, canvasMatrix.width, canvasMatrix.height); ctxMatrix.fillStyle = "rgba(0, 240, 255, 0.4)"; ctxMatrix.font = fontSize + "px monospace"; for (let i = 0; i < dropsArr.length; i++) { const text = charArr[Math.floor(Math.random() * charArr.length)]; ctxMatrix.fillText(text, i * fontSize, dropsArr[i] * fontSize); if (dropsArr[i] * fontSize > canvasMatrix.height && Math.random() > 0.975) { dropsArr[i] = 0; } dropsArr[i]++; } }
     setInterval(drawMatrixRainEffect, 33);
 
-    function toggleModalView(modalId, shouldOpen) { const modalElement = document.getElementById(modalId); if(shouldOpen) { modalElement.classList.remove('hidden'); } else { modalElement.classList.add('hidden'); } }
+    // 🎯 ADVANCED RESPONSIVE MODAL CONTROL ENGINE WITH VIRTUAL HISTORY TRACKING
+    function toggleModalView(modalId, shouldOpen) { 
+      const modalElement = document.getElementById(modalId); 
+      if(shouldOpen) { 
+        modalElement.classList.remove('hidden'); 
+        // Virtual state inject kiya taaki manual phone back button kam kar sake
+        openModalsQueue.push(modalId);
+        window.history.pushState({ activeModal: modalId }, "");
+      } else { 
+        modalElement.classList.add('hidden'); 
+        openModalsQueue = openModalsQueue.filter(id => id !== modalId);
+      } 
+    }
+    
+    // 🎯 HARDCORE MANUAL BACK BUTTON INTERCEPTION LOOP
+    window.addEventListener('popstate', function (event) {
+      if (openModalsQueue.length > 0) {
+        // Agar koi popup khula hai toh phone back karne par website se bahar nahi fekega, sirf popup close hoga
+        const topModalId = openModalsQueue.pop();
+        const modalElement = document.getElementById(topModalId);
+        if (modalElement) {
+          modalElement.classList.add('hidden');
+        }
+      }
+    });
+
     function revealProfilePanel() { const panel = document.getElementById('expandedProfilePanel'); panel.scrollIntoView({ behavior: 'smooth' }); }
     function closeCapabilityAndFocus() { toggleModalView('servicesMiddleModal', false); document.getElementById('expandedProfilePanel').scrollIntoView({ behavior: 'smooth' }); }
-    function triggerYoutubeRedirectAction() { const targetModal = document.getElementById('youtubeTimeoutModal'); const barFill = document.getElementById('countdownBar'); barFill.style.animation = 'none'; barFill.offsetHeight; barFill.style.animation = 'shrinkBar 3s linear forwards'; targetModal.classList.remove('hidden'); setTimeout(function() { targetModal.classList.add('hidden'); document.getElementById('expandedProfilePanel').scrollIntoView({ behavior: 'smooth' }); }, 3000); }
+    function triggerYoutubeRedirectAction() { const targetModal = document.getElementById('youtubeTimeoutModal'); const barFill = document.getElementById('countdownBar'); barFill.style.animation = 'none'; barFill.offsetHeight; barFill.style.animation = 'shrinkBar 3s linear forwards'; targetModal.classList.remove('hidden'); openModalsQueue.push('youtubeTimeoutModal'); window.history.pushState({ activeModal: 'youtubeTimeoutModal' }, ""); setTimeout(function() { targetModal.classList.add('hidden'); openModalsQueue = openModalsQueue.filter(id => id !== 'youtubeTimeoutModal'); document.getElementById('expandedProfilePanel').scrollIntoView({ behavior: 'smooth' }); }, 3000); }
   </script>
 
 </body>
