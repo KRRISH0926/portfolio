@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
-  <title>KRRISH KUMAR</title>
+  <title>Krrish Kumar </title>
   
   <meta name="google-site-verification" content="j42vtUwLL_LwMXJPJtmKJcwp85MK1iFyc_2smX30Nr8" />
   
@@ -27,8 +27,10 @@
 
     html, body {
       cursor: default;
+      width: 100%;
+      overflow-x: hidden; /* 🚨 Strict boundary restriction to prevent side sliding */
     }
-    a, button, .contact-matrix-row, input, textarea, .gallery-asset-card, .grid-box-module, .hamburger-icon, .menu-link {
+    a, button, .contact-matrix-row, input, textarea, .gallery-asset-card, .grid-box-module, .hamburger-icon, .menu-link, .premium-border-frame {
       cursor: pointer;
     }
 
@@ -68,21 +70,20 @@
     body {
       background-color: #030306;
       color: #ffffff;
-      overflow-x: hidden;
       min-height: 100vh;
       scroll-behavior: smooth;
     }
 
     .hidden { display: none !important; }
 
-    /* 🍔 ADVANCED HAMBURGER MENU - FIXED COMPONENT WITH MOBILE TUNING */
+    /* 🍔 ADVANCED HAMBURGER MENU */
     .nav-header-left-wrapper {
       position: fixed;
       top: 30px;
       left: 30px;
       display: flex;
       align-items: center;
-      z-index: 4000; /* Increased to stay above standard content wrappers */
+      z-index: 4000;
     }
     .hamburger-icon {
       width: 32px;
@@ -145,27 +146,7 @@
       padding-left: 18px;
     }
 
-    /* FIXED STATUS BAR INTERFACE */
-    .shrunk-center-status {
-      position: absolute;
-      top: 25px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 700;
-      color: #00f0ff;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      background: rgba(3, 3, 6, 0.7);
-      border: 1px solid rgba(0, 240, 255, 0.25);
-      padding: 6px 16px;
-      border-radius: 3px;
-      box-shadow: 0 0 15px rgba(0, 240, 255, 0.05);
-      white-space: nowrap;
-      pointer-events: none;
-    }
+    /* 🛑 STATUS BAR INTERFACE COMPLETELY REMOVED FROM CSS PATH FOR ALIGNMENT */
 
     /* SYSTEM ACCESS BADGE */
     .dynamic-access-granted-box {
@@ -248,14 +229,14 @@
       pointer-events: none;
     }
 
-    /* CLASSIC NAVIGATION BUTTONS WITH HIGH FLEXIBILITY OVERRIDE */
+    /* CLASSIC NAVIGATION BUTTONS */
     .top-navbar {
       position: fixed;
       top: 30px;
       right: 30px;
       display: flex;
       gap: 15px;
-      z-index: 4000; /* Raised to match hamburger z-index bounds */
+      z-index: 4000;
     }
 
     .nav-btn {
@@ -285,7 +266,7 @@
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 25px;
+      padding: 0 20px;
       position: relative;
     }
 
@@ -410,15 +391,21 @@
     .hud-brackets-decor::before { top: 45px; left: calc(50% - 165px); }
     .hud-brackets-decor::after { bottom: -5px; right: calc(50% - 165px); }
 
+    /* 📱 SOPHISTICATED HOME PORTRAIT SIZE OPTIMIZATION */
     .premium-border-frame {
-      width: 320px;
-      height: 410px;
+      width: 240px; /* Shrunk down from 320px for slick, non-awkward homepage first impressions */
+      height: 310px; /* Height adjusted proportionately */
       background: #060a14;
       border: 1px solid #00f0ff;
       border-radius: 2px;
       padding: 6px;
       box-shadow: 0 0 25px rgba(0, 240, 255, 0.15);
       position: relative;
+      transition: all 0.3s ease;
+    }
+    .premium-border-frame:hover {
+      box-shadow: 0 0 35px rgba(0, 240, 255, 0.4);
+      border-color: #ffffff;
     }
 
     .image-viewport {
@@ -441,6 +428,41 @@
       object-fit: cover;
       z-index: 2;
       position: relative;
+    }
+
+    /* 🖼️ HIGH-TECH FULLSCREEN IMAGE INTERFACE MODAL */
+    .fullscreen-photo-portal {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(2, 3, 7, 0.98);
+      z-index: 6000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: modalScaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .fullscreen-photo-wrapper {
+      width: 90%;
+      max-width: 450px;
+      height: 80vh;
+      border: 2px solid #00f0ff;
+      padding: 8px;
+      background: #060a14;
+      box-shadow: 0 0 50px rgba(0, 240, 255, 0.4);
+      position: relative;
+    }
+    #matrixFullscreenCanvas {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 1;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    .fullscreen-photo-wrapper img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      position: relative;
+      z-index: 2;
     }
 
     /* SECTION 2: DEEP PROFILE PANEL SHEET */
@@ -947,7 +969,7 @@
     /* STANDARD MODAL BLOCKS OVERLAYS */
     .modal-overlay-screen {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(2, 3, 7, 0.96); z-index: 5000; /* Raised up above the sub-page grid framework layers completely */
+      background: rgba(2, 3, 7, 0.96); z-index: 5000; 
       display: flex; justify-content: center; align-items: center;
     }
     .modal-dialogue-box {
@@ -995,20 +1017,27 @@
     @media (max-width: 768px) {
       .collection-boxes-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery-matrix-grid { grid-template-columns: 1fr; }
-      .shrunk-center-status { width: 90%; text-align: center; font-size: 0.65rem; letter-spacing: 1.5px; position: absolute; }
       
-      /* 🚨 FIXED BOTTOM CONFLICT OVERRIDE: Shifted elements cleanly back to header layers on viewport collapse */
+      /* 🚨 FIXED BOTTOM CONFLICT OVERRIDE: Fixed top header layout setup */
       .nav-header-left-wrapper { top: 25px; bottom: auto; left: 20px; }
       .top-navbar { top: 25px; bottom: auto; right: 20px; justify-content: flex-end; width: auto; gap: 8px; }
       .dropdown-cyber-menu { top: 70px; bottom: auto; left: 20px; right: auto; }
       
-      .hero-interface { flex-direction: column-reverse; text-align: center; padding-top: 100px; }
+      /* 🚨 SIDE FLUIDITY ALIGNMENT: 100% stable block grid layout, zero slide overlay issues */
+      .hero-interface { flex-direction: column-reverse; text-align: center; padding-top: 90px; gap: 20px; width: 100%; }
       .hero-left-column, .hero-right-column { width: 100%; }
-      .hero-left-column h1 { font-size: 3.4rem; margin-top: 35px; }
+      .hero-left-column h1 { font-size: 3.0rem; margin-top: 15px; }
+      .professional-manifesto { font-size: 1.1rem; margin-bottom: 30px; }
+      
       .dashboard-split-layout { flex-direction: column; gap: 30px; }
       .details-left-segment, .services-right-segment { width: 100%; }
       .skills-custom-grid { grid-template-columns: 1fr; }
       .projects-matrix-grid { grid-template-columns: 1fr; }
+      
+      .premium-border-frame { width: 160px; height: 210px; } /* Even sleeker preview on phones */
+      .frame-header-name { font-size: 1.6rem; letter-spacing: 4px; margin-bottom: 5px; }
+      .hud-brackets-decor::before { top: 35px; left: calc(50% - 85px); }
+      .hud-brackets-decor::after { bottom: -5px; right: calc(50% - 85px); }
     }
   </style>
 </head>
@@ -1213,12 +1242,17 @@
     </div>
   </div>
 
+  <div id="fullscreenPhotoPortal" class="fullscreen-photo-portal hidden" onclick="closeFullscreenPhotoPortal()">
+    <div class="fullscreen-photo-wrapper" onclick="event.stopPropagation(); closeFullscreenPhotoPortal();">
+      <canvas id="matrixFullscreenCanvas"></canvas>
+      <img src="https://i.ibb.co/99ZtNCjR/1768792554257.jpg" alt="Krrish Kumar Singh Full View Core Profile">
+    </div>
+  </div>
+
   <div class="viewport-wrapper">
      
     <section id="mainHeroHomepage" class="hero-interface">
       <canvas id="cyberMeshCanvas"></canvas>
-      <div id="dynamicGreeterBadge" class="shrunk-center-status">[ S T A T U S : LOADING MATRIX ]</div>
-
       <div class="hero-left-column">
         <div class="hero-structural-spacer"></div>
         <h1>Krrish Kumar<br>Singh</h1>
@@ -1234,7 +1268,7 @@
 
       <div class="hero-right-column hud-brackets-decor">
         <div class="frame-header-name">KRRISH</div>
-        <div class="premium-border-frame">
+        <div class="premium-border-frame" onclick="openFullscreenPhotoPortal()">
           <div class="image-viewport">
             <canvas id="matrixPortraitCanvas"></canvas>
             <img src="https://i.ibb.co/99ZtNCjR/1768792554257.jpg" alt="Krrish Kumar Singh Official Portrait Profile">
@@ -1385,13 +1419,13 @@
   </div>
 
   <script>
-    // Global array tracker to intercept manual back triggers
     let openModalsQueue = [];
 
     document.addEventListener("DOMContentLoaded", function() {
       resizeMeshCanvas(); animateNetworkMesh();
-      initializeDynamicTimeGreeter(); initializeRealtimeCyberGreeting(); 
+      initializeRealtimeCyberGreeting(); 
       setTimeout(executeTypingAnimation, 500); 
+      initFullscreenMatrixRain(); // Init the custom full screen layer rain matrix
     });
 
     window.addEventListener('click', function(event) {
@@ -1424,7 +1458,6 @@
       toggleModalView('noImageAssetModal', true); 
     }
 
-    // 🎯 RE-ENGINEERED STEP BACK LOGIC WITH POPSTATE STABILITY
     function closeCollectionSubPageAndKeepGalleryOpen() {
       toggleModalView('collectionSubPage', false); 
       toggleModalView('galleryPopupModal', true);   
@@ -1457,15 +1490,6 @@
       if (!isDeleting && currentCharIndex === currentFullText.length) { isDeleting = true; setTimeout(executeTypingAnimation, 2000); }
       else if (isDeleting && currentCharIndex === 0) { isDeleting = false; currentWordIndex = (currentWordIndex + 1) % wordsArray.length; setTimeout(executeTypingAnimation, 500); }
       else { setTimeout(executeTypingAnimation, isDeleting ? 50 : 100); }
-    }
-
-    // TIMEOUT BADGE INFRASTRUCTURE
-    function initializeDynamicTimeGreeter() {
-      const currentHour = new Date().getHours(); const targetGreeterBadge = document.getElementById("dynamicGreeterBadge"); if (!targetGreeterBadge) return;
-      if (currentHour >= 5 && currentHour < 12) { targetGreeterBadge.textContent = "[ S T A T U S : C O M P I L I N G   M O R N I N G   I D E A S . . . ]"; }
-      else if (currentHour >= 12 && currentHour < 17) { targetGreeterBadge.textContent = "[ S T A T U S : A F T E R N O O N   P R O D U C T I O N . . . ]"; }
-      else if (currentHour >= 17 && currentHour < 21) { targetGreeterBadge.textContent = "[ S T A T U S : E V E N I N G   G R I N D   A C T I V E . . . ]"; }
-      else { targetGreeterBadge.textContent = "[ S T A T U S : L A T E   N I G H T   C O D I N G   P H A S E . . . ]"; }
     }
 
     // MESH NETWORK STYLES CANVAS GRAPHICS
@@ -1501,12 +1525,28 @@
     function drawMatrixRainEffect() { ctxMatrix.fillStyle = "rgba(1, 1, 3, 0.08)"; ctxMatrix.fillRect(0, 0, canvasMatrix.width, canvasMatrix.height); ctxMatrix.fillStyle = "rgba(0, 240, 255, 0.4)"; ctxMatrix.font = fontSize + "px monospace"; for (let i = 0; i < dropsArr.length; i++) { const text = charArr[Math.floor(Math.random() * charArr.length)]; ctxMatrix.fillText(text, i * fontSize, dropsArr[i] * fontSize); if (dropsArr[i] * fontSize > canvasMatrix.height && Math.random() > 0.975) { dropsArr[i] = 0; } dropsArr[i]++; } }
     setInterval(drawMatrixRainEffect, 33);
 
+    /* 🖼️ INTERACTIVE FULL-SCREEN OVERLAY ENGINE PROTOCOLS */
+    const canvasFullMatrix = document.getElementById("matrixFullscreenCanvas"); const ctxFullMatrix = canvasFullMatrix.getContext("2d");
+    let fullDropsArr = [], fullColumns = 0;
+    function initFullscreenMatrixRain() { canvasFullMatrix.width = 450; canvasFullMatrix.height = window.innerHeight * 0.8; fullColumns = canvasFullMatrix.width / fontSize; for (let x = 0; x < fullColumns; x++) fullDropsArr[x] = 1; }
+    function drawFullscreenMatrixRain() { ctxFullMatrix.fillStyle = "rgba(2, 3, 7, 0.08)"; ctxFullMatrix.fillRect(0, 0, canvasFullMatrix.width, canvasFullMatrix.height); ctxFullMatrix.fillStyle = "rgba(0, 240, 255, 0.4)"; ctxFullMatrix.font = fontSize + "px monospace"; for (let i = 0; i < fullDropsArr.length; i++) { const text = charArr[Math.floor(Math.random() * charArr.length)]; ctxFullMatrix.fillText(text, i * fontSize, fullDropsArr[i] * fontSize); if (fullDropsArr[i] * fontSize > canvasFullMatrix.height && Math.random() > 0.975) { fullDropsArr[i] = 0; } fullDropsArr[i]++; } }
+    setInterval(drawFullscreenMatrixRain, 33);
+
+    function openFullscreenPhotoPortal() {
+      document.getElementById('fullscreenPhotoPortal').classList.remove('hidden');
+      openModalsQueue.push('fullscreenPhotoPortal');
+      window.history.pushState({ activeModal: 'fullscreenPhotoPortal' }, "");
+    }
+    function closeFullscreenPhotoPortal() {
+      document.getElementById('fullscreenPhotoPortal').classList.add('hidden');
+      openModalsQueue = openModalsQueue.filter(id => id !== 'fullscreenPhotoPortal');
+    }
+
     // 🎯 ADVANCED RESPONSIVE MODAL CONTROL ENGINE WITH VIRTUAL HISTORY TRACKING
     function toggleModalView(modalId, shouldOpen) { 
       const modalElement = document.getElementById(modalId); 
       if(shouldOpen) { 
         modalElement.classList.remove('hidden'); 
-        // Virtual state inject kiya taaki manual phone back button kam kar sake
         openModalsQueue.push(modalId);
         window.history.pushState({ activeModal: modalId }, "");
       } else { 
@@ -1518,7 +1558,6 @@
     // 🎯 HARDCORE MANUAL BACK BUTTON INTERCEPTION LOOP
     window.addEventListener('popstate', function (event) {
       if (openModalsQueue.length > 0) {
-        // Agar koi popup khula hai toh phone back karne par website se bahar nahi fekega, sirf popup close hoga
         const topModalId = openModalsQueue.pop();
         const modalElement = document.getElementById(topModalId);
         if (modalElement) {
