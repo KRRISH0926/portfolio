@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
-  <title>Krrish Kumar </title>
+  <title>Krrish Kumar Singh | Cyber Portfolio</title>
   
   <meta name="google-site-verification" content="j42vtUwLL_LwMXJPJtmKJcwp85MK1iFyc_2smX30Nr8" />
   
@@ -28,10 +28,11 @@
     html, body {
       cursor: default;
       width: 100%;
-      overflow-x: hidden; /* 🚨 Strict boundary restriction to prevent side sliding */
+      overflow-x: hidden;
     }
     a, button, .contact-matrix-row, input, textarea, .gallery-asset-card, .grid-box-module, .hamburger-icon, .menu-link, .premium-border-frame {
       cursor: pointer;
+      touch-action: manipulation; 
     }
 
     /* ⚡ PREMIUM 0.2s NEON CLICK RIPPLE EFFECT */
@@ -76,9 +77,9 @@
 
     .hidden { display: none !important; }
 
-    /* 🍔 ADVANCED HAMBURGER MENU */
+    /* 🍔 HAMBURGER MENU: FIXED ABSOLUTE */
     .nav-header-left-wrapper {
-      position: fixed;
+      position: absolute; 
       top: 30px;
       left: 30px;
       display: flex;
@@ -106,7 +107,7 @@
     .hamburger-icon.open span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
 
     .dropdown-cyber-menu {
-      position: fixed;
+      position: absolute; 
       top: 75px;
       left: 30px;
       background: rgba(4, 8, 22, 0.96);
@@ -145,8 +146,6 @@
       color: #00f0ff;
       padding-left: 18px;
     }
-
-    /* 🛑 STATUS BAR INTERFACE COMPLETELY REMOVED FROM CSS PATH FOR ALIGNMENT */
 
     /* SYSTEM ACCESS BADGE */
     .dynamic-access-granted-box {
@@ -229,9 +228,9 @@
       pointer-events: none;
     }
 
-    /* CLASSIC NAVIGATION BUTTONS */
+    /* TOP NAVBAR BUTTONS */
     .top-navbar {
-      position: fixed;
+      position: absolute; 
       top: 30px;
       right: 30px;
       display: flex;
@@ -338,19 +337,19 @@
       background: linear-gradient(90deg, rgba(0, 162, 255, 0.05), rgba(0, 240, 255, 0.2));
       color: #ffffff;
       border: 1px solid #00f0ff;
-      padding: 16px 36px;
-      font-size: 0.85rem;
+      padding: 18px 40px; 
+      font-size: 0.9rem;
       font-weight: 700;
       border-radius: 4px;
       letter-spacing: 2px;
       text-transform: uppercase;
       cursor: pointer;
       box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
-      transition: all 0.3s ease;
+      transition: all 0.15s ease-in-out;
       font-family: 'Orbitron', sans-serif;
     }
 
-    .primary-trigger-btn:hover {
+    .primary-trigger-btn:hover, .primary-trigger-btn:active {
       background: #00f0ff;
       color: #030306;
       box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
@@ -391,10 +390,9 @@
     .hud-brackets-decor::before { top: 45px; left: calc(50% - 165px); }
     .hud-brackets-decor::after { bottom: -5px; right: calc(50% - 165px); }
 
-    /* 📱 SOPHISTICATED HOME PORTRAIT SIZE OPTIMIZATION */
     .premium-border-frame {
-      width: 240px; /* Shrunk down from 320px for slick, non-awkward homepage first impressions */
-      height: 310px; /* Height adjusted proportionately */
+      width: 240px; 
+      height: 310px; 
       background: #060a14;
       border: 1px solid #00f0ff;
       border-radius: 2px;
@@ -430,7 +428,7 @@
       position: relative;
     }
 
-    /* 🖼️ HIGH-TECH FULLSCREEN IMAGE INTERFACE MODAL */
+    /* 🖼️ FULLSCREEN OVERLAY MODAL CONFIG */
     .fullscreen-photo-portal {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
@@ -660,7 +658,7 @@
       width: 100%;
       margin-top: 35px;
       padding-top: 30px;
-      border-top: 1px solid rgba(0, 240, 255, 0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .workspace-subheading {
@@ -763,6 +761,7 @@
       text-transform: uppercase;
       transition: all 0.3s;
       font-family: 'Orbitron', sans-serif;
+      text-decoration: none; 
     }
 
     .youtube-trigger-btn {
@@ -901,7 +900,7 @@
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
       background: #030306;
-      z-index: 2500; 
+      z-index: 5100; 
       padding: 40px;
       overflow-y: auto;
     }
@@ -972,11 +971,14 @@
       background: rgba(2, 3, 7, 0.96); z-index: 5000; 
       display: flex; justify-content: center; align-items: center;
     }
+    
     .modal-dialogue-box {
       background: rgba(4, 8, 22, 0.98); border: 2px solid #00f0ff;
-      padding: 40px; border-radius: 4px; text-align: center;
-      max-width: 520px; width: 90%; box-shadow: 0 0 40px rgba(0, 240, 255, 0.25);
+      padding: 30px; border-radius: 4px; text-align: center;
+      max-width: 520px; width: 92%; box-shadow: 0 0 40px rgba(0, 240, 255, 0.25);
       animation: modalScaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      max-height: 85vh; 
+      overflow-y: auto;  
     }
     .modal-title-text { font-family: 'Orbitron', sans-serif; font-size: 1.6rem; font-weight: 800; letter-spacing: 2px; color: #00f0ff; margin-bottom: 15px; }
     .modal-desc-text { font-size: 1rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 25px; text-align: left; }
@@ -985,17 +987,36 @@
       background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3);
       padding: 12px 30px; font-weight: 600; font-size: 0.8rem; letter-spacing: 2px;
       transition: all 0.3s; font-family: 'Orbitron', sans-serif;
+      margin-top: 10px;
     }
     .modal-close-trigger:hover, .glowing-back-btn:hover { background: #ffffff; color: #030306; }
     .thanks-visit-btn { background: linear-gradient(90deg, rgba(0, 240, 255, 0.8), rgba(0, 162, 255, 0.8)); color: #030306; border: none; border-radius: 4px; box-shadow: 0 0 15px rgba(0, 240, 255, 0.4); text-transform: uppercase; }
     .thanks-visit-btn:hover { box-shadow: 0 0 25px #00f0ff; transform: scale(1.03); }
 
     .advanced-contact-matrix { display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px; text-align: left; }
-    .contact-matrix-row { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 12px 16px; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
-    .contact-matrix-row:hover { background: rgba(0, 240, 255, 0.04); }
+    
+    .contact-matrix-row { 
+      background: rgba(255, 255, 255, 0.02); 
+      border: 1px solid rgba(255, 255, 255, 0.05); 
+      padding: 12px 16px; 
+      border-radius: 4px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      transition: all 0.2s; 
+      text-decoration: none; 
+      color: inherit;
+    }
+    .contact-matrix-row:hover { 
+      background: rgba(0, 240, 255, 0.06); 
+      border-color: #00f0ff;
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+    }
     .contact-matrix-label { font-size: 0.75rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 1px; }
     .contact-matrix-value { font-size: 0.92rem; font-weight: 600; }
     .value-active { font-family: 'Courier New', Courier, monospace; color: #00f0ff; font-weight: 700; }
+    .value-instagram { color: #ff55bb; font-weight: 700; font-family: 'Orbitron', sans-serif; }
+    .value-telegram { color: #22a2f2; font-weight: 700; font-family: 'Orbitron', sans-serif; }
     .value-offline { color: #64748b; font-size: 0.75rem; letter-spacing: 0.5px; }
     
     .mini-screen-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2, 3, 7, 0.85); z-index: 5200; display: flex; justify-content: center; align-items: center; }
@@ -1009,21 +1030,16 @@
     .terminal-ln { display: block; }
     .terminal-accent { color: #00f0ff; }
     .terminal-cursor { display: inline-block; width: 8px; height: 15px; background: #00f0ff; margin-left: 4px; animation: cursorBlink 0.8s infinite; vertical-align: middle; }
-    .youtube-alert-border { border-color: #ff3e3e !important; box-shadow: 0 0 40px rgba(255, 62, 62, 0.2) !important; }
-    .countdown-bar-wrapper { width: 100%; height: 2px; background: rgba(255, 62, 62, 0.1); margin-top: 20px; border-radius: 1px; overflow: hidden; }
-    .countdown-bar-fill { width: 100%; height: 100%; background: #ff3e3e; }
 
     /* 📱 HARDCORE MOBILE RESPONSIVE TUNING */
     @media (max-width: 768px) {
-      .collection-boxes-grid { grid-template-columns: repeat(2, 1fr); }
+      .collection-boxes-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
       .gallery-matrix-grid { grid-template-columns: 1fr; }
       
-      /* 🚨 FIXED BOTTOM CONFLICT OVERRIDE: Fixed top header layout setup */
-      .nav-header-left-wrapper { top: 25px; bottom: auto; left: 20px; }
-      .top-navbar { top: 25px; bottom: auto; right: 20px; justify-content: flex-end; width: auto; gap: 8px; }
-      .dropdown-cyber-menu { top: 70px; bottom: auto; left: 20px; right: auto; }
+      .nav-header-left-wrapper { top: 25px; left: 20px; }
+      .top-navbar { top: 25px; right: 20px; justify-content: flex-end; width: auto; gap: 8px; }
+      .dropdown-cyber-menu { top: 70px; left: 20px; }
       
-      /* 🚨 SIDE FLUIDITY ALIGNMENT: 100% stable block grid layout, zero slide overlay issues */
       .hero-interface { flex-direction: column-reverse; text-align: center; padding-top: 90px; gap: 20px; width: 100%; }
       .hero-left-column, .hero-right-column { width: 100%; }
       .hero-left-column h1 { font-size: 3.0rem; margin-top: 15px; }
@@ -1034,7 +1050,7 @@
       .skills-custom-grid { grid-template-columns: 1fr; }
       .projects-matrix-grid { grid-template-columns: 1fr; }
       
-      .premium-border-frame { width: 160px; height: 210px; } /* Even sleeker preview on phones */
+      .premium-border-frame { width: 160px; height: 210px; } 
       .frame-header-name { font-size: 1.6rem; letter-spacing: 4px; margin-bottom: 5px; }
       .hud-brackets-decor::before { top: 35px; left: calc(50% - 85px); }
       .hud-brackets-decor::after { bottom: -5px; right: calc(50% - 85px); }
@@ -1053,14 +1069,13 @@
     <div class="hamburger-icon" id="cyberHamburgerTrigger" onclick="toggleHamburgerDropdownMenu()">
       <span></span><span></span><span></span>
     </div>
-  </div>
-
-  <div class="dropdown-cyber-menu" id="cyberDropdownContainer">
-    <button class="menu-link" onclick="triggerWorkInProgressNotice()">> VIEW</button>
+    <div class="dropdown-cyber-menu" id="cyberDropdownContainer">
+      <button class="menu-link" onclick="triggerWorkInProgressNotice()">> VIEW</button>
+    </div>
   </div>
 
   <div id="wipMenuNoticeModal" class="modal-overlay-screen hidden" onclick="toggleModalView('wipMenuNoticeModal', false)">
-    <div class="modal-dialogue-box" style="border-color: #00f0ff; box-shadow: 0 0 35px rgba(0,240,255,0.25);" onclick="event.stopPropagation()">
+    <div class="modal-dialogue-box" style="border-color: #00f0ff; box-shadow: 0 0 35px rgba(255,240,255,0.25);" onclick="event.stopPropagation()">
       <div class="modal-title-text">> SYSTEM BUFFER: WORK IN PROGRESS</div>
       <div class="modal-desc-text" style="text-align: center; color: #cbd5e1; font-size: 1.05rem;">
         This core node is currently undergoing structural engineering.
@@ -1084,15 +1099,22 @@
           <span class="contact-matrix-label">Email Portal</span>
           <span class="contact-matrix-value value-active">krrishkumar92634@gmail.com</span>
         </div>
+        
+        <a href="https://www.instagram.com/krrish_0926?igsh=MWZhZWUxMDVudGhneg==" target="_blank" class="contact-matrix-row">
+          <span class="contact-matrix-label">Instagram Node</span>
+          <span class="contact-matrix-value value-instagram">@krrish_0926</span>
+        </a>
+
+        <a href="https://t.me/Krrish0926" target="_blank" class="contact-matrix-row">
+          <span class="contact-matrix-label">Telegram Channel</span>
+          <span class="contact-matrix-value value-telegram">@Krrish0926</span>
+        </a>
+
         <div class="contact-matrix-row" onclick="triggerWittyLinkError('GitHub Node')">
           <span class="contact-matrix-label">GitHub Node</span>
           <span class="contact-matrix-value value-offline">[CONNECTION OFFLINE]</span>
         </div>
-        <div class="contact-matrix-row" onclick="triggerWittyLinkError('Social Feed')">
-          <span class="contact-matrix-label">Social Feed</span>
-          <span class="contact-matrix-value value-offline">[NETWORK LINK BUILDING]</span>
-        </div>
-        <p class="more-details-flag">More details will be available soon...</p>
+        <p class="more-details-flag">Click on active nodes to redirect instantly...</p>
       </div>
       <button class="modal-close-trigger" onclick="toggleModalView('contactPopupModal', false)">DISCONNECT TERMINAL</button>
     </div>
@@ -1211,21 +1233,6 @@
     </div>
   </div>
 
-  <div id="youtubeTimeoutModal" class="modal-overlay-screen hidden">
-    <div class="modal-dialogue-box youtube-alert-border">
-      <div class="modal-title-text" style="color: #ff3e3e;">CHANNEL INTERFACE</div>
-      <div class="modal-desc-text" style="text-align: center; margin-bottom: 10px;">
-        The official digital broadcasting terminal is currently undergoing asset configuration.
-        <br><br>
-        <span style="color: #94a3b8; font-size: 0.9rem; font-weight: 600;">Status: AVAILABLE SOON</span>
-      </div>
-      <p style="font-size: 0.8rem; color: #64748b;">Automatically returning to mainframe matrix...</p>
-      <div class="countdown-bar-wrapper">
-        <div id="countdownBar" class="countdown-bar-fill"></div>
-      </div>
-    </div>
-  </div>
-
   <div id="projectAlphaModal" class="modal-overlay-screen hidden">
     <div class="modal-dialogue-box">
       <div class="modal-title-text">PROJECT ALPHA CORE CONSOLE</div>
@@ -1253,6 +1260,7 @@
      
     <section id="mainHeroHomepage" class="hero-interface">
       <canvas id="cyberMeshCanvas"></canvas>
+
       <div class="hero-left-column">
         <div class="hero-structural-spacer"></div>
         <h1>Krrish Kumar<br>Singh</h1>
@@ -1358,6 +1366,7 @@
       <div class="projects-workspace-section">
         <div class="workspace-subheading">01 // RECENT ASSETS & PROJECTS</div>
         <div class="projects-matrix-grid">
+          
           <div class="project-terminal-card">
             <div>
               <div class="project-card-header">
@@ -1366,12 +1375,13 @@
               </div>
               <p class="project-card-desc">Providing high-end conceptual blueprints, deep dives into website working conditions, modular interface animations, and specialized front-end asset engineering tutorial workflows.</p>
             </div>
-            <button class="youtube-trigger-btn" onclick="triggerYoutubeRedirectAction()">
+            
+            <a href="https://www.youtube.com/@CYBERCOREARTS" target="_blank" class="youtube-trigger-btn">
               <svg viewBox="0 0 24 24">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
               Launch Channel
-            </button>
+            </a>
           </div>
 
           <div class="project-terminal-card">
@@ -1408,7 +1418,7 @@
             <label>YOUR MESSAGE:</label>
             <textarea rows="5" required placeholder="Type your message text here..."></textarea>
           </div>
-          <button type="submit" class="form-submit-trigger">SEND MESSAGE</button>
+          <div class="form-submit-trigger" style="text-align: center;" onclick="triggerSimulatedFormMaintenanceAlert()">SEND MESSAGE</div>
         </form>
       </div>
 
@@ -1425,7 +1435,7 @@
       resizeMeshCanvas(); animateNetworkMesh();
       initializeRealtimeCyberGreeting(); 
       setTimeout(executeTypingAnimation, 500); 
-      initFullscreenMatrixRain(); // Init the custom full screen layer rain matrix
+      initFullscreenMatrixRain(); 
     });
 
     window.addEventListener('click', function(event) {
@@ -1434,7 +1444,7 @@
       document.body.appendChild(ripple); setTimeout(() => { ripple.remove(); }, 200);
     });
 
-    /* HAMBURGER DRAWERS CONTROL */
+    /* HAMBURGER CONTROL */
     function toggleHamburgerDropdownMenu() {
       document.getElementById('cyberHamburgerTrigger').classList.toggle('open');
       document.getElementById('cyberDropdownContainer').classList.toggle('active');
@@ -1447,29 +1457,61 @@
       toggleModalView('formMaintenanceAlertModal', true);
     }
 
-    // GALLERY SECTIONS ENGINE
+    // 🚨 100% PURE MANUALLY CONTROLLED SEQUENTIAL ROUTING ENGINE
     function openCollectionSubPage(categoryTitle) {
       document.getElementById('collectionPageTitle').textContent = "> ASSET PIPELINE // " + categoryTitle;
-      toggleModalView('galleryPopupModal', false); 
-      toggleModalView('collectionSubPage', true);
+      
+      // Step 1: Hide main 4-layout modal completely
+      document.getElementById('galleryPopupModal').classList.add('hidden');
+      
+      // Step 2: Uncover the nested 10-slot layout
+      document.getElementById('collectionSubPage').classList.remove('hidden');
+      
+      // Sync manual state stack tracking to isolate it from window history redirect bugs
+      openModalsQueue.push('collectionSubPage');
     }
     
+    function closeCollectionSubPageAndKeepGalleryOpen() {
+      // Step 1: Shut down the 10-slot layer manually without calling history.back()
+      document.getElementById('collectionSubPage').classList.add('hidden');
+      openModalsQueue = openModalsQueue.filter(id => id !== 'collectionSubPage');
+      
+      // Step 2: Instantly bring back the 4-layout selection console card
+      document.getElementById('galleryPopupModal').classList.remove('hidden');
+    }
+
+    // HARDWARE BACK GESTURE SAFETY INTERCEPTOR OVERRIDE
+    window.addEventListener('popstate', function (event) {
+      if (openModalsQueue.includes('collectionSubPage')) {
+        // Intercept standard global exit loop
+        closeCollectionSubPageAndKeepGalleryOpen();
+      } else if (openModalsQueue.length > 0) {
+        const topModalId = openModalsQueue.pop();
+        document.getElementById(topModalId).classList.add('hidden');
+      }
+    });
+
+    function toggleModalView(modalId, shouldOpen) { 
+      const modalElement = document.getElementById(modalId); 
+      if(shouldOpen) { 
+        modalElement.classList.remove('hidden'); 
+        openModalsQueue.push(modalId);
+        window.history.pushState({ activeModal: modalId }, "");
+      } else { 
+        modalElement.classList.add('hidden'); 
+        openModalsQueue = openModalsQueue.filter(id => id !== modalId);
+      } 
+    }
+
     function triggerNoImageAssetAlert() { 
       toggleModalView('noImageAssetModal', true); 
     }
 
-    function closeCollectionSubPageAndKeepGalleryOpen() {
-      toggleModalView('collectionSubPage', false); 
-      toggleModalView('galleryPopupModal', true);   
-    }
-
-    // FULL GLOBAL SCROLL RESET STRAIGHT TO HOME TOP
     function returnToMainView() {
       const targetHeader = document.getElementById('mainHeroHomepage');
       if(targetHeader) { targetHeader.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     }
 
-    // REAL-TIME GREETING DATA INFUSION
     function initializeRealtimeCyberGreeting() {
       const greetingLog = document.getElementById('realtimeCyberGreeting'); if (!greetingLog) return;
       const currentHour = new Date().getHours();
@@ -1492,7 +1534,7 @@
       else { setTimeout(executeTypingAnimation, isDeleting ? 50 : 100); }
     }
 
-    // MESH NETWORK STYLES CANVAS GRAPHICS
+    // MESH CANVAS
     const canvasMesh = document.getElementById("cyberMeshCanvas"); const ctxMesh = canvasMesh.getContext("2d");
     let nodesArray = [], mouseCoordinates = { x: null, y: null, radius: 140 };
     function resizeMeshCanvas() { if (!canvasMesh) return; canvasMesh.width = canvasMesh.parentElement.offsetWidth; canvasMesh.height = canvasMesh.parentElement.offsetHeight; initNetworkMesh(); }
@@ -1525,7 +1567,6 @@
     function drawMatrixRainEffect() { ctxMatrix.fillStyle = "rgba(1, 1, 3, 0.08)"; ctxMatrix.fillRect(0, 0, canvasMatrix.width, canvasMatrix.height); ctxMatrix.fillStyle = "rgba(0, 240, 255, 0.4)"; ctxMatrix.font = fontSize + "px monospace"; for (let i = 0; i < dropsArr.length; i++) { const text = charArr[Math.floor(Math.random() * charArr.length)]; ctxMatrix.fillText(text, i * fontSize, dropsArr[i] * fontSize); if (dropsArr[i] * fontSize > canvasMatrix.height && Math.random() > 0.975) { dropsArr[i] = 0; } dropsArr[i]++; } }
     setInterval(drawMatrixRainEffect, 33);
 
-    /* 🖼️ INTERACTIVE FULL-SCREEN OVERLAY ENGINE PROTOCOLS */
     const canvasFullMatrix = document.getElementById("matrixFullscreenCanvas"); const ctxFullMatrix = canvasFullMatrix.getContext("2d");
     let fullDropsArr = [], fullColumns = 0;
     function initFullscreenMatrixRain() { canvasFullMatrix.width = 450; canvasFullMatrix.height = window.innerHeight * 0.8; fullColumns = canvasFullMatrix.width / fontSize; for (let x = 0; x < fullColumns; x++) fullDropsArr[x] = 1; }
@@ -1542,33 +1583,8 @@
       openModalsQueue = openModalsQueue.filter(id => id !== 'fullscreenPhotoPortal');
     }
 
-    // 🎯 ADVANCED RESPONSIVE MODAL CONTROL ENGINE WITH VIRTUAL HISTORY TRACKING
-    function toggleModalView(modalId, shouldOpen) { 
-      const modalElement = document.getElementById(modalId); 
-      if(shouldOpen) { 
-        modalElement.classList.remove('hidden'); 
-        openModalsQueue.push(modalId);
-        window.history.pushState({ activeModal: modalId }, "");
-      } else { 
-        modalElement.classList.add('hidden'); 
-        openModalsQueue = openModalsQueue.filter(id => id !== modalId);
-      } 
-    }
-    
-    // 🎯 HARDCORE MANUAL BACK BUTTON INTERCEPTION LOOP
-    window.addEventListener('popstate', function (event) {
-      if (openModalsQueue.length > 0) {
-        const topModalId = openModalsQueue.pop();
-        const modalElement = document.getElementById(topModalId);
-        if (modalElement) {
-          modalElement.classList.add('hidden');
-        }
-      }
-    });
-
     function revealProfilePanel() { const panel = document.getElementById('expandedProfilePanel'); panel.scrollIntoView({ behavior: 'smooth' }); }
     function closeCapabilityAndFocus() { toggleModalView('servicesMiddleModal', false); document.getElementById('expandedProfilePanel').scrollIntoView({ behavior: 'smooth' }); }
-    function triggerYoutubeRedirectAction() { const targetModal = document.getElementById('youtubeTimeoutModal'); const barFill = document.getElementById('countdownBar'); barFill.style.animation = 'none'; barFill.offsetHeight; barFill.style.animation = 'shrinkBar 3s linear forwards'; targetModal.classList.remove('hidden'); openModalsQueue.push('youtubeTimeoutModal'); window.history.pushState({ activeModal: 'youtubeTimeoutModal' }, ""); setTimeout(function() { targetModal.classList.add('hidden'); openModalsQueue = openModalsQueue.filter(id => id !== 'youtubeTimeoutModal'); document.getElementById('expandedProfilePanel').scrollIntoView({ behavior: 'smooth' }); }, 3000); }
   </script>
 
 </body>
